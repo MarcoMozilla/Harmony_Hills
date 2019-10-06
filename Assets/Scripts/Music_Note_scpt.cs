@@ -44,10 +44,10 @@ public class Music_Note_scpt: MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >idx/5*2)
-        {
-            hit();
-        }
+        //if (Time.time >idx/5*2)
+        //{
+        //    hit();
+        //}
     }
     public void hit()
     {
