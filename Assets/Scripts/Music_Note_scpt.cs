@@ -37,17 +37,12 @@ public class Music_Note_scpt: MonoBehaviour
         else if (tone < 0) {
             tone_text.text = new String('-', -tone);
         }
-
-       
     }
 
 
     private void Update()
     {
-        //if (Time.time >idx/5*2)
-        //{
-        //    hit();
-        //}
+
     }
     public void hit()
     {
@@ -58,9 +53,5 @@ public class Music_Note_scpt: MonoBehaviour
             Lamp_Light_scpt.turn_on_lights(this.idx);
             Debug.Log("turn on light:" + this.idx.ToString());
         }
-
-
     }
-
-
 }

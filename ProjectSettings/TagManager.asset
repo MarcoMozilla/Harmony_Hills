@@ -9,6 +9,10 @@ TagManager:
   - character
   - way
   - lamp_light
+  - max_score_text
+  - mark
+  - music_notes
+  - music_note_mark
   layers:
   - Default
   - TransparentFX
