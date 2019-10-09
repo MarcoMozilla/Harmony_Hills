@@ -73,24 +73,24 @@ public class Character : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "music_note")
-        {
-            score += 50;
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.tag == "music_note")
+    //     {
+    //         score += 50;
             
-            //st.text = "Score: " + score.ToString();
-            //if (score >= max_score)
-            //{
-            //    max_score = score;
-            //    mst.text = "Max Score: " + max_score.ToString();
-            //}
+    //         //st.text = "Score: " + score.ToString();
+    //         //if (score >= max_score)
+    //         //{
+    //         //    max_score = score;
+    //         //    mst.text = "Max Score: " + max_score.ToString();
+    //         //}
 
-            other.gameObject.GetComponent<Music_Note_scpt>().hit();
-            Debug.Log("hit111111111111111111111");
+    //         other.gameObject.GetComponent<Music_Note_scpt>().hit();
+    //         Debug.Log("hit111111111111111111111");
 
-        }
+    //     }
 
-    }
+    // }
 
 }
