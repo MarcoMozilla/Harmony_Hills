@@ -80,7 +80,7 @@ public class MusicNotes : MonoBehaviour
             // hitMusicNote.GetComponent<Music_Note_scpt>().hit();
             score += 1;
             synchronization = score * 100.00/max_score;
-            st.text = "Synchronization: " + String.Format("{0:F2}", synchronization);
+            st.text = "Synchronization: " + String.Format("{0:F2}", synchronization) + " %";
         }
     }
     (PathCreator pathSelected, int position) selectRandomPath()
