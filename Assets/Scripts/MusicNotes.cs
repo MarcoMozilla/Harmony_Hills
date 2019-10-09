@@ -23,6 +23,8 @@ public class MusicNotes : MonoBehaviour
     public Character character;
     // private int position = 0;
     public Text st;
+
+    static public double synchronization;
     static public float[] musicNoteTime = {2.5f, 3, 4.25f, 4.5f, 5.25f, 5.5f, 6.25f, 6.5f, 7.25f,
             7.5f, 8.25f, 8.5f, 9.25f, 9.5f, 10.25f, 10.5f, 11.25f, 11.5f, 12.25f, 12.5f, 13,
             13.5f, 13.75f, 14.25f, 14.5f, 15.25f, 15.5f, 16.25f, 16.5f, 17.25f, 17.5f, 17.75f,
@@ -77,7 +79,7 @@ public class MusicNotes : MonoBehaviour
             Destroy(hitMusicNote);
             // hitMusicNote.GetComponent<Music_Note_scpt>().hit();
             score += 1;
-            double synchronization = score * 100.00/max_score;
+            synchronization = score * 100.00/max_score;
             st.text = "Synchronization: " + String.Format("{0:F2}", synchronization);
         }
     }

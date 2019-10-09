@@ -13,6 +13,7 @@ TagManager:
   - mark
   - music_notes
   - music_note_mark
+  - level_complete_panel
   layers:
   - Default
   - TransparentFX

@@ -14,8 +14,6 @@ public class Init_Note_Pos : MonoBehaviour
             Transform t = ways[i].transform.GetChild(2);
             t.localPosition = new Vector3(poses[i], t.localPosition.y, t.localPosition.z);
             //Debug.Log(i.ToString() + ":"+ t.position);
-
-
         }
 
     }
