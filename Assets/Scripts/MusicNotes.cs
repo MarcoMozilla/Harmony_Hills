@@ -57,28 +57,29 @@ public class MusicNotes : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        // GameObject[] musicNotes = GameObject.FindGameObjectsWithTag("music_notes");
-        // GameObject hitMusicNote = null;
-        // for (int i = 0; i < musicNotes.Length; i++)
-        // {
-        //     float dist = Vector3.Distance(character.transform.position, musicNotes[i].transform.position);
-        //     Debug.Log(dist);
-        //     if (dist < 3)
-        //     {
-        //         Debug.Log("Distance to character: " + dist);
-        //         hitMusicNote = musicNotes[i];
-        //     }
-        // }
-        // if(hitMusicNote)
-        // {
-        //     //Destroy(hitMusicNote);
-        //     hitMusicNote.GetComponent<Music_Note_scpt>().hit();
-        //     score += 1;
-        //     double synchronization = score * 100.00/max_score;
-        //     st.text = "Synchronization: " + String.Format("{0:F2}", synchronization);
-        // }
+        GameObject[] musicNotes = GameObject.FindGameObjectsWithTag("music_note");
+        GameObject hitMusicNote = null;
+        for (int i = 0; i < musicNotes.Length; i++)
+        {
+            float dist = Vector3.Distance(character.transform.position, musicNotes[i].transform.position);
+            if (dist < 3)
+            {
+                Debug.Log(dist);
+                Debug.Log("Distance to character: " + dist);
+                hitMusicNote = musicNotes[i];
+                break;
+            }
+        }
+        if(hitMusicNote)
+        {
+            Destroy(hitMusicNote);
+            // hitMusicNote.GetComponent<Music_Note_scpt>().hit();
+            score += 1;
+            double synchronization = score * 100.00/max_score;
+            st.text = "Synchronization: " + String.Format("{0:F2}", synchronization);
+        }
     }
     (PathCreator pathSelected, int position) selectRandomPath()
     {
