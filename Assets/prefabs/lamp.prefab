@@ -1353,7 +1353,6 @@ GameObject:
   - component: {fileID: 3759268245194529385}
   - component: {fileID: 5769460191432658497}
   - component: {fileID: 1958709867898862066}
-  - component: {fileID: 6908465728436934873}
   m_Layer: 0
   m_Name: lamp_light
   m_TagString: lamp_light
@@ -1498,19 +1497,6 @@ LensFlare:
     m_Bits: 6
   m_Directional: 0
 --- !u!114 &1958709867898862066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8942578058800687570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb08d681b92f434c9e8c76042ea0e59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idx: 0
---- !u!114 &6908465728436934873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

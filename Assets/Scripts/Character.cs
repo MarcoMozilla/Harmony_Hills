@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
     private TMP_Text tone_text;
     public int tone = 0;
     public int score = 0;
+    public bool AxisActive = false;
     void Start()
     {
         pathCreatorSelected = pathCreatorMiddle;
@@ -23,11 +24,14 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.inputString != "") Debug.Log(Input.inputString);
         float speed = 20;
         distanceTravelled += speed * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
+        //if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
+        if (AxisActive == false && ((Input.GetAxis("DPadX") == -1f) || Input.GetKeyDown("left")))
         {
-            if(position == 2)
+            AxisActive = true;
+            if (position == 2)
             {
                 pathCreatorSelected = pathCreatorMiddle;
                 position = 0;
@@ -36,9 +40,11 @@ public class Character : MonoBehaviour
                 pathCreatorSelected = pathCreatorLeft;
                 position = -2;
             }
-        } 
-        if (Input.GetKeyDown(KeyCode.JoystickButton8) ||Input.GetKeyDown("right"))
+        }
+        //if (Input.GetKeyDown(KeyCode.JoystickButton8) ||Input.GetKeyDown("right"))
+        if (AxisActive == false && ((Input.GetAxis("DPadX") == 1f)|| Input.GetKeyDown("right")))
         {
+            AxisActive = true;
             if(position == -2)
             {
                 pathCreatorSelected = pathCreatorMiddle;
@@ -49,6 +55,12 @@ public class Character : MonoBehaviour
                 position = 2;
             }
         }
+
+        if (Input.GetAxis("DPadX") == 0f)
+        {
+            AxisActive = false;
+        }
+
         transform.position = pathCreatorSelected.path.GetPointAtDistance(distanceTravelled);
         transform.rotation = pathCreatorSelected.path.GetRotationAtDistance(distanceTravelled);
         if (Input.GetKeyDown(KeyCode.UpArrow) && tone < 2)
