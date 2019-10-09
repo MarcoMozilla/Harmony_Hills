@@ -207,6 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2957097502494428718}
   - component: {fileID: 446773960570680819}
+  - component: {fileID: 1099103613136137812}
   m_Layer: 0
   m_Name: music_note
   m_TagString: music_notes
@@ -246,6 +247,19 @@ MonoBehaviour:
   MusicSource: {fileID: 3729421488884391664}
   tone: 0
   idx: 0
+--- !u!65 &1099103613136137812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386291904212615512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2945994115345195464
 GameObject:
   m_ObjectHideFlags: 0

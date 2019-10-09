@@ -49,9 +49,9 @@ public class Music_Note_scpt: MonoBehaviour
         if (!has_played) {
             MusicSource.Play();
             Destroy(transform.Find("model3D").gameObject);
-            has_played = true;
-            Lamp_Light_scpt.turn_on_lights(this.idx);
-            Debug.Log("turn on light:" + this.idx.ToString());
+            //has_played = true;
+            //Lamp_Light_scpt.turn_on_lights(this.idx);
+            //Debug.Log("turn on light:" + this.idx.ToString());
         }
     }
 }

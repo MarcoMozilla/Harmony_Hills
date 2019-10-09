@@ -38,7 +38,7 @@ public class MusicNotes : MonoBehaviour
     public int max_score = 0;
     private void Start()
     {
-        float speed = pathCreatorMiddle.path.length / 61.5f;
+        float speed = 20;
         GameObject[] musicNote = GameObject.FindGameObjectsWithTag("music_note");
         Debug.Log(musicNoteTime.Length);
         max_score = musicNoteTime.Length;
@@ -50,8 +50,8 @@ public class MusicNotes : MonoBehaviour
             musicNote[i].transform.position = pathCreatorSelected.path.GetPointAtDistance(distance);
             musicNote[i].transform.rotation = pathCreatorSelected.path.GetRotationAtDistance(distance);
         }
-        MusicSource.clip = MusicClip;
-        MusicSource.Play();
+        //MusicSource.clip = MusicClip;
+        //MusicSource.Play();
         st = GameObject.Find("score_text").GetComponent<Text>();
         score = 0;
     }
