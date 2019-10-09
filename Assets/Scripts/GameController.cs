@@ -57,10 +57,6 @@ public class GameController : MonoBehaviour
 
     public void Restart ()
 	{
-        string s = File.ReadAllText("info.txt");
-        Movement.mst.text = "Max Score: " + s;
-        string resultString = Regex.Match(s, @"\d+").Value;
-        Movement.max_score = Int32.Parse(resultString);
         completeLevelUI.SetActive(false);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
@@ -87,7 +83,7 @@ public class GameController : MonoBehaviour
                 lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
                 lower_text.text = "Try Again";
                 completeLevelUI.SetActive(true);
-            } 
+            }
         }
 	}
 }
