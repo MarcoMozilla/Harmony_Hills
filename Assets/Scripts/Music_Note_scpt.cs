@@ -23,10 +23,16 @@ public class Music_Note_scpt: MonoBehaviour
     private void Start()
     {
         //Debug.Log("Start");
-        MusicSource.clip = MusicClip;
-        //Debug.Log(transform.Find("texts"));
-        //Debug.Log(transform.Find("texts").Find("text").GetComponent<TMP_Text>());
-        tone_text = transform.Find("model3D").Find("texts").Find("text").GetComponent<TMP_Text>();
+        //MusicSource.clip = MusicClip;
+        //Debug.Log(this.gameObject);
+        //Debug.Log(this.transform.Find("model3D"));
+        
+        //Debug.Log(this.transform.Find("model3D").Find("texts"));
+        //Debug.Log(this.transform.Find("model3D").Find("texts").Find("text"));
+        //Debug.Log(this.transform.Find("model3D").Find("texts").Find("text").GetComponent<TMP_Text>());
+        
+        tone_text = this.transform.Find("model3D").Find("texts").Find("text").GetComponent<TMP_Text>();
+   
         if (tone == 0)
         { 
         }
@@ -47,10 +53,11 @@ public class Music_Note_scpt: MonoBehaviour
     public void hit()
     {
         if (!has_played) {
+            //Debug.Log("HIT"+this.idx);
             MusicSource.Play();
             Destroy(transform.Find("model3D").gameObject);
-            //has_played = true;
-            //Lamp_Light_scpt.turn_on_lights(this.idx);
+            has_played = true;
+            Lamp_Light_scpt.turn_on_lights(this.idx);
             //Debug.Log("turn on light:" + this.idx.ToString());
         }
     }

@@ -7,12 +7,9 @@ TagManager:
   - score_text
   - music_note
   - character
-  - way
   - lamp_light
   - max_score_text
   - mark
-  - music_notes
-  - music_note_mark
   - level_complete_panel
   layers:
   - Default

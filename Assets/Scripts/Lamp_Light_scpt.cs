@@ -50,7 +50,7 @@ public class Lamp_Light_scpt : MonoBehaviour
             Lamp_Light_scpt lls = lamp_light.GetComponent<Lamp_Light_scpt>();
 
              
-            Debug.Log(lls.idx);
+            //Debug.Log(lls.idx);
             if (res.ContainsKey(lls.idx))
             {
                 res[lls.idx].Add(lamp_light);
@@ -63,7 +63,7 @@ public class Lamp_Light_scpt : MonoBehaviour
             }
         }
         dctn_idx_2_lights = res;
-        Debug.Log(dctn_idx_2_lights);
+        //Debug.Log(dctn_idx_2_lights);
 
     }
 

@@ -42,8 +42,9 @@ public class MusicNotes : MonoBehaviour
     {
         float speed = 20;
         GameObject[] musicNote = GameObject.FindGameObjectsWithTag("music_note");
-        Debug.Log(musicNoteTime.Length);
+        //Debug.Log(musicNoteTime.Length);
         max_score = musicNoteTime.Length;
+        /*
         for (int i = 0; i < musicNoteTime.Length; i++)
         {
             (PathCreator pathCreatorSelected, int position) = selectRandomPath();
@@ -52,6 +53,7 @@ public class MusicNotes : MonoBehaviour
             musicNote[i].transform.position = pathCreatorSelected.path.GetPointAtDistance(distance);
             musicNote[i].transform.rotation = pathCreatorSelected.path.GetRotationAtDistance(distance);
         }
+        */
         //MusicSource.clip = MusicClip;
         //MusicSource.Play();
         st = GameObject.Find("score_text").GetComponent<Text>();
@@ -68,8 +70,8 @@ public class MusicNotes : MonoBehaviour
             float dist = Vector3.Distance(character.transform.position, musicNotes[i].transform.position);
             if (dist < 3)
             {
-                Debug.Log(dist);
-                Debug.Log("Distance to character: " + dist);
+                //Debug.Log(dist);
+                //Debug.Log("Distance to character: " + dist);
                 hitMusicNote = musicNotes[i];
                 break;
             }

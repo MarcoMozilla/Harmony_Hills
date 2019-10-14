@@ -7,6 +7,8 @@ public class Init_Note_Pos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        /*
         GameObject[] ways = GameObject.FindGameObjectsWithTag("way");
         int[] poses = { 0, 0, 1, 1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, -1, 0, 1, 1, -1, 0, -1, 0, 1, 1, 1, 1, 1, -1 };
 
@@ -15,7 +17,7 @@ public class Init_Note_Pos : MonoBehaviour
             t.localPosition = new Vector3(poses[i], t.localPosition.y, t.localPosition.z);
             //Debug.Log(i.ToString() + ":"+ t.position);
         }
-
+        */
     }
 
    

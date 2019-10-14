@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
 
 
 
-    private void Awake()
+    private void Start()
     {
         //在整个游戏中只会运行一次的代码放在这里
         Lamp_Light_scpt.init_dctn_idx_2_lights();
