@@ -24,10 +24,17 @@ public class Movement : MonoBehaviour
 
 
 
+
+    private void Awake()
+    {
+        Path_Node_scpt.init_dctn_idx_2_mark_set();
+        //Debug.Log(Path_Node_scpt.dctn_idx_2_mark_set);
+    }
     private void Start()
     {
         //在整个游戏中只会运行一次的代码放在这里
         Lamp_Light_scpt.init_dctn_idx_2_lights();
+        
     }
 
     /*

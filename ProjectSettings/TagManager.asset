@@ -11,6 +11,7 @@ TagManager:
   - max_score_text
   - mark
   - level_complete_panel
+  - mark_set
   layers:
   - Default
   - TransparentFX
