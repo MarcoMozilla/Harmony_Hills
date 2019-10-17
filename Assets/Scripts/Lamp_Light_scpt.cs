@@ -25,6 +25,7 @@ public class Lamp_Light_scpt : MonoBehaviour
         
         this.transform.GetComponent<Light>().enabled = true;
         this.transform.GetComponent<LensFlare>().enabled = true;
+        Debug.Log(this.transform.GetComponent<LensFlare>().enabled = true);
         this.transform.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         
     }
@@ -83,6 +84,19 @@ public class Lamp_Light_scpt : MonoBehaviour
             lls.turn_on();
         }
         
+    }
+
+    public static List<GameObject> getlights(int need_turn_on_idx)
+    {
+        if (!dctn_idx_2_lights.ContainsKey(need_turn_on_idx))
+        {
+            Debug.Log("invalid need_turn_on_idx");
+        }
+
+
+        List<GameObject> lights = dctn_idx_2_lights[need_turn_on_idx];
+        return lights;
+
     }
 
 }

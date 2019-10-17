@@ -13,7 +13,7 @@ public class Music_Note_scpt: MonoBehaviour
     private TMP_Text tone_text;
     private bool has_played = false;
 
-
+    public GameObject myPrefab;
 
     private void Awake()
     {
@@ -57,8 +57,25 @@ public class Music_Note_scpt: MonoBehaviour
             MusicSource.Play();
             Destroy(transform.Find("model3D").gameObject);
             has_played = true;
-            Lamp_Light_scpt.turn_on_lights(this.idx);
+
             //Debug.Log("turn on light:" + this.idx.ToString());
+            List<GameObject> lights = Lamp_Light_scpt.getlights(this.idx);
+
+            foreach (GameObject light in lights)
+            {
+                flare_scpt fscpt = myPrefab.gameObject.GetComponent<flare_scpt>();
+                fscpt.beginpos = this.transform.position;
+                fscpt.endpos = light.transform.position;
+                fscpt.light_idx = this.idx;
+
+                GameObject flare = Instantiate(myPrefab, fscpt.beginpos, Quaternion.identity);
+
+            }
+
+           
+            
+            //Lamp_Light_scpt.turn_on_lights(this.idx);
+
         }
     }
 }

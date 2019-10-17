@@ -4,14 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - score_text
-  - music_note
-  - character
-  - lamp_light
-  - max_score_text
-  - mark
+  - Shootable
   - level_complete_panel
+  - character
+  - max_score_text
+  - score_text
   - mark_set
+  - lamp_light
+  - music_note
+  - mark
+  - ice_fall
+  - gap_enter
   layers:
   - Default
   - TransparentFX
@@ -21,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -46,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -247,6 +247,8 @@ MonoBehaviour:
   MusicSource: {fileID: 3729421488884391664}
   tone: 0
   idx: 0
+  myPrefab: {fileID: 3380963142775374254, guid: 40be69a1124b1ba4ca50624ef5c1a399,
+    type: 3}
 --- !u!65 &1099103613136137812
 BoxCollider:
   m_ObjectHideFlags: 0
