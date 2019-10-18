@@ -9210,9 +9210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c26ade8845d4f9c99520df59f466ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeLevelUI: {fileID: 0}
-  upper_text: {fileID: 0}
-  lower_text: {fileID: 0}
+  completeLevelUI: {fileID: 563977023}
+  upper_text: {fileID: 691314589}
+  lower_text: {fileID: 144161223}
 --- !u!4 &1528994603
 Transform:
   m_ObjectHideFlags: 0
