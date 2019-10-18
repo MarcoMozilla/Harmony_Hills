@@ -23,6 +23,25 @@ public class Character : MonoBehaviour
     private int nextpos;
     private float start_shift_time;
 
+
+    //speed
+
+    public float speed;
+    //jump
+    public float jump_height;
+    public float jump_period;
+    private float start_jump_time;
+    private bool jumping;
+    private float curjump_height;
+
+
+    //using logic
+    /* 0 : 默认node path 逻辑
+     * 1： 撞到block逻辑
+     * 2： 撞到gap enter
+     */
+    public int move_logic;
+
     public Vector2 idx_hidx;
     void Start()
     {
@@ -34,18 +53,46 @@ public class Character : MonoBehaviour
         hori_pos = 0;
         curpos = 0;
         nextpos = 0;
+
+        //jump
+        jumping = false;
+        curjump_height = 0;
         
 
     }
     // Update is called once per frame
     void Update()
     {
-        idx_hidx[0] = (float) Time.time / 2;
-        idx_hidx[1] = hori_pos;
-        int idx = Path_Node_scpt.idx_float2int(idx_hidx[0]);
-        int hidx = Path_Node_scpt.hidx_float2int(idx_hidx[1]);
-        this.transform.position = Path_Node_scpt.queryPos(idx_hidx, idx, hidx);
-        this.transform.rotation = Path_Node_scpt.queryRotY(idx_hidx, idx, hidx);
+
+        if (move_logic == 0)
+        {
+            idx_hidx[0] = (float)Time.time * speed;
+            idx_hidx[1] = hori_pos;
+            int idx = Path_Node_scpt.idx_float2int(idx_hidx[0]);
+            int hidx = Path_Node_scpt.hidx_float2int(idx_hidx[1]);
+
+            Vector3 pos = Path_Node_scpt.queryPos(idx_hidx, idx, hidx);
+            pos.y += curjump_height;
+            this.transform.position = pos;
+            this.transform.rotation = Path_Node_scpt.queryRotY(idx_hidx, idx, hidx);
+
+            // 如果 idx_hidx[0]> path node 的个数
+            //游戏结束
+
+        }
+        else if (move_logic == 1)
+        {
+
+            //过一段时间之后游戏结束
+        }
+        else if (move_logic ==2){
+            Rigidbody rb = this.transform.GetComponent<Rigidbody>();
+            rb.useGravity = true;
+            rb.AddForce(this.transform.forward*100);
+
+            //过一段时间游戏结束
+        }
+
 
 
         if (curpos != nextpos) {
@@ -62,9 +109,32 @@ public class Character : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyDown("left"))
+
+
+        float jump_time_length = Time.time - start_jump_time;
+        float jump_a = jump_time_length / jump_period;
+        float logiH = getLogiHeight(jump_a);
+
+        if (logiH >= 0)
         {
-            
+
+
+            curjump_height = logiH * jump_height;
+
+
+        }
+        else
+        {
+            curjump_height = 0;
+            jumping = false;
+        }
+
+
+        // keyboard input
+
+        if (Input.GetKeyDown("left"))
+        {
+
             if (nextpos - 1 >= -1)
             {
                 nextpos = nextpos - 1;
@@ -80,6 +150,15 @@ public class Character : MonoBehaviour
                 start_shift_time = Time.time;
             }
          
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !jumping )
+        {
+            
+                start_jump_time = Time.time;
+                jumping = false;
+                
+
         }
 
 
@@ -165,12 +244,19 @@ public class Character : MonoBehaviour
         {
 
             //撞到ice的
+            move_logic = 1;
         }
         else if (other.tag == "gap_enter") {
 
             //进入gap
+            move_logic = 2;
         }
 
+    }
+
+
+    public static float getLogiHeight(float x) {
+        return -x * (x - 2);
     }
     
 
