@@ -8,7 +8,6 @@ using System.Text.RegularExpressions;
 public class GameController : MonoBehaviour
 {
     public GameObject completeLevelUI;
-    bool gameHasEnded = false;
     public Text upper_text;
     public Text lower_text;
     public void PlayGame()
@@ -61,29 +60,25 @@ public class GameController : MonoBehaviour
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
-    public void OnTriggerEnter()
-    {
-        EndGame();
-    }
-    public void EndGame ()
+    // public void OnTriggerEnter()
+    // {
+    //     EndGame();
+    // }
+    public void EndGame (bool win)
 	{
-		if (gameHasEnded == false)
+		if (win)
 		{
-			gameHasEnded = true;
-            if (MusicNotes.synchronization >= 30)
-            {
-                upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
-                upper_text.text = "Home";
-                lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
-                lower_text.text = "Arrived";
-                completeLevelUI.SetActive(true);    
-            } else {
-                upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
-                upper_text.text = "Lost";
-                lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
-                lower_text.text = "Try Again";
-                completeLevelUI.SetActive(true);
-            }
+            upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
+            upper_text.text = "Home";
+            lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
+            lower_text.text = "Arrived";
+            completeLevelUI.SetActive(true);
+        } else {
+            upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
+            upper_text.text = "Lost";
+            lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
+            lower_text.text = "Try Again";
+            completeLevelUI.SetActive(true);
         }
 	}
 }

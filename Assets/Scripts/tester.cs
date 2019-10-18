@@ -52,7 +52,7 @@ public class tester : MonoBehaviour
             idx_hidx = new Vector2(0,-1);
         }
 
-        Debug.Log(adder);
+        //Debug.Log(adder);
         idx_hidx = idx_hidx + adder * speed; 
         
 

@@ -25,7 +25,7 @@ public class Lamp_Light_scpt : MonoBehaviour
         
         this.transform.GetComponent<Light>().enabled = true;
         this.transform.GetComponent<LensFlare>().enabled = true;
-        Debug.Log(this.transform.GetComponent<LensFlare>().enabled = true);
+        //Debug.Log(this.transform.GetComponent<LensFlare>().enabled = true);
         this.transform.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         
     }

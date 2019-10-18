@@ -3,6 +3,7 @@ using PathCreation;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 public class Character : MonoBehaviour
 {
     //public PathCreator pathCreatorLeft;
@@ -43,6 +44,7 @@ public class Character : MonoBehaviour
     public int move_logic;
 
     public Vector2 idx_hidx;
+    public Text energy_txt;
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
@@ -105,7 +107,6 @@ public class Character : MonoBehaviour
             }
             else {
                 hori_pos = (1-a) * curpos + a * nextpos;
-
             }
 
         }
@@ -115,13 +116,9 @@ public class Character : MonoBehaviour
         float jump_a = jump_time_length / jump_period;
         float logiH = getLogiHeight(jump_a);
 
-        if (logiH >= 0)
+        if (jumping && logiH >= 0)
         {
-
-
             curjump_height = logiH * jump_height;
-
-
         }
         else
         {
@@ -154,11 +151,8 @@ public class Character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !jumping )
         {
-            
-                start_jump_time = Time.time;
-                jumping = false;
-                
-
+            start_jump_time = Time.time;
+            jumping = false;
         }
 
 
@@ -234,11 +228,9 @@ public class Character : MonoBehaviour
         if (other.tag == "music_note")
         {
             score += 50;
-
+            energy_txt.text = "Energy: " + score;
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
-
-
         }
         else if (other.tag == "ice_fall")
         {
@@ -250,6 +242,21 @@ public class Character : MonoBehaviour
 
             //进入gap
             move_logic = 2;
+        }
+        else if (other.tag == "breakable_barrier") {
+            Debug.Log("breakable_barrier");
+            if (score < 500)
+            {
+                Debug.Log("You die");
+                other.gameObject.GetComponent<GameController>().EndGame(false);
+                move_logic = 1;
+            } else 
+            {
+                Debug.Log("breakable_barrier: break");
+                score -= 500;
+                energy_txt.text = "Energy: " + score;
+                Destroy(other.gameObject);
+            }
         }
 
     }

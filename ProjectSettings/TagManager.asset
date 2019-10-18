@@ -15,6 +15,7 @@ TagManager:
   - mark
   - ice_fall
   - gap_enter
+  - breakable_barrier
   layers:
   - Default
   - TransparentFX
