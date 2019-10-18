@@ -151,8 +151,9 @@ public class Character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !jumping )
         {
+            Debug.Log("test jump");
             start_jump_time = Time.time;
-            jumping = false;
+            jumping = true;
         }
 
 

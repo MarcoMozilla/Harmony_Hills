@@ -72,13 +72,13 @@ public class GameController : MonoBehaviour
             upper_text.text = "Home";
             lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
             lower_text.text = "Arrived";
-            completeLevelUI.SetActive(true);
         } else {
             upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
             upper_text.text = "Lost";
             lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
             lower_text.text = "Try Again";
-            completeLevelUI.SetActive(true);
         }
+        completeLevelUI.SetActive(true);
+        return;
 	}
 }
