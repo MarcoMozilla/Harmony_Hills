@@ -216,6 +216,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 288858175}
     m_Modifications:
+    - target: {fileID: -2562257950298065544, guid: 7a7fb9cd28a00be498b761a3b357ca88,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7942088581966561161, guid: 7a7fb9cd28a00be498b761a3b357ca88,
         type: 3}
       propertyPath: m_Name
@@ -6493,6 +6502,7 @@ MonoBehaviour:
   move_logic: 0
   idx_hidx: {x: 0, y: 0}
   energy_txt: {fileID: 1458535409}
+  GameOverTime: 0
 --- !u!54 &1057413765
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9437,7 +9447,6 @@ GameObject:
   - component: {fileID: 1548378643}
   - component: {fileID: 1548378647}
   - component: {fileID: 1548378648}
-  - component: {fileID: 1548378649}
   m_Layer: 0
   m_Name: way_start
   m_TagString: Untagged
@@ -9630,18 +9639,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1548378649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548378642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4100bce36d767ae49aad62696513c87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1556779133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13633,7 +13630,7 @@ PrefabInstance:
     - target: {fileID: 2554185236762283741, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
       propertyPath: fall_time
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1100714310257898134, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
@@ -13699,6 +13696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100714310257898155, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa, type: 3}
@@ -13789,6 +13791,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4361303385999116896, guid: 7b909620aecf7401a9789970d06446af,
+        type: 3}
+      propertyPath: m_Name
+      value: breakable_barrier
+      objectReference: {fileID: 0}
     - target: {fileID: 5363535559175992583, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: completeLevelUI
@@ -13804,11 +13811,6 @@ PrefabInstance:
       propertyPath: lower_text
       value: 
       objectReference: {fileID: 144161223}
-    - target: {fileID: 4361303385999116896, guid: 7b909620aecf7401a9789970d06446af,
-        type: 3}
-      propertyPath: m_Name
-      value: breakable_barrier
-      objectReference: {fileID: 0}
     - target: {fileID: 4361303385999116900, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: m_LocalPosition.x

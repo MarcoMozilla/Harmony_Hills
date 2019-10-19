@@ -58,7 +58,8 @@ public class GameController : MonoBehaviour
 	{
         completeLevelUI.SetActive(false);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-	}
+        //Character.Restart();
+    }
 
     // public void OnTriggerEnter()
     // {

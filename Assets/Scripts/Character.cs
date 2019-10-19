@@ -45,9 +45,13 @@ public class Character : MonoBehaviour
 
     public Vector2 idx_hidx;
     public Text energy_txt;
+    public static float start_time;
+    public float GameOverTime;
+
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
+        Debug.Log("Starttttttttttt");
         position = 0;
         tone_text = transform.Find("mark").Find("Text (TMP)").GetComponent<TMP_Text>();
         idx_hidx = new Vector2(0, 0);
@@ -59,7 +63,7 @@ public class Character : MonoBehaviour
         //jump
         jumping = false;
         curjump_height = 0;
-        
+        start_time = Time.time;
 
     }
     // Update is called once per frame
@@ -68,12 +72,13 @@ public class Character : MonoBehaviour
 
         if (move_logic == 0)
         {
-            idx_hidx[0] = (float)Time.time * speed;
+            idx_hidx[0] = (float)(Time.time - start_time) * speed;
             idx_hidx[1] = hori_pos;
             int idx = Path_Node_scpt.idx_float2int(idx_hidx[0]);
             int hidx = Path_Node_scpt.hidx_float2int(idx_hidx[1]);
-
+            Debug.Log(idx_hidx);
             Vector3 pos = Path_Node_scpt.queryPos(idx_hidx, idx, hidx);
+            
             pos.y += curjump_height;
             this.transform.position = pos;
             this.transform.rotation = Path_Node_scpt.queryRotY(idx_hidx, idx, hidx);
@@ -93,6 +98,12 @@ public class Character : MonoBehaviour
             rb.AddForce(this.transform.forward*100);
 
             //过一段时间游戏结束
+        }
+        if (Time.time - GameOverTime > 3)
+        {
+            Debug.Log("You die");
+            GameController game_controller = GameObject.FindGameObjectWithTag("breakable_barrier").transform.GetComponent<GameController>();
+            game_controller.EndGame(false);
         }
 
 
@@ -237,11 +248,13 @@ public class Character : MonoBehaviour
         {
 
             //撞到ice的
+            GameOverTime = Time.time;
             move_logic = 1;
         }
         else if (other.tag == "gap_enter") {
 
             //进入gap
+            GameOverTime = Time.time;
             move_logic = 2;
         }
         else if (other.tag == "breakable_barrier") {
