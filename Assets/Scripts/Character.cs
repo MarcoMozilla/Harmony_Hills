@@ -47,6 +47,7 @@ public class Character : MonoBehaviour
     public Text energy_txt;
     public static float start_time;
     public float GameOverTime;
+    public bool isGameOver;
 
     void Start()
     {
@@ -65,6 +66,8 @@ public class Character : MonoBehaviour
         curjump_height = 0;
         start_time = Time.time;
 
+        isGameOver = false;
+
     }
     // Update is called once per frame
     void Update()
@@ -76,7 +79,7 @@ public class Character : MonoBehaviour
             idx_hidx[1] = hori_pos;
             int idx = Path_Node_scpt.idx_float2int(idx_hidx[0]);
             int hidx = Path_Node_scpt.hidx_float2int(idx_hidx[1]);
-            Debug.Log(idx_hidx);
+            //Debug.Log(idx_hidx);
             Vector3 pos = Path_Node_scpt.queryPos(idx_hidx, idx, hidx);
             
             pos.y += curjump_height;
@@ -99,7 +102,7 @@ public class Character : MonoBehaviour
 
             //过一段时间游戏结束
         }
-        if (Time.time - GameOverTime > 3)
+        if (isGameOver && Time.time - GameOverTime > 3)
         {
             Debug.Log("You die");
             GameController game_controller = GameObject.FindGameObjectWithTag("breakable_barrier").transform.GetComponent<GameController>();
@@ -248,13 +251,17 @@ public class Character : MonoBehaviour
         {
 
             //撞到ice的
+            Debug.Log("ice_fall");
             GameOverTime = Time.time;
+            isGameOver = true;
             move_logic = 1;
         }
         else if (other.tag == "gap_enter") {
 
             //进入gap
+            Debug.Log("gap_enter");
             GameOverTime = Time.time;
+            isGameOver = true;
             move_logic = 2;
         }
         else if (other.tag == "breakable_barrier") {
