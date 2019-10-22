@@ -247,23 +247,23 @@ public class Character : MonoBehaviour
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
         }
-        else if (other.tag == "ice_fall")
-        {
+        // else if (other.tag == "ice_fall")
+        // {
 
-            //撞到ice的
-            Debug.Log("ice_fall");
-            GameOverTime = Time.time;
-            isGameOver = true;
-            move_logic = 1;
-        }
-        else if (other.tag == "gap_enter") {
+        //     //撞到ice的
+        //     Debug.Log("ice_fall");
+        //     GameOverTime = Time.time;
+        //     isGameOver = true;
+        //     move_logic = 1;
+        // }
+        // else if (other.tag == "gap_enter") {
 
-            //进入gap
-            Debug.Log("gap_enter");
-            GameOverTime = Time.time;
-            isGameOver = true;
-            move_logic = 2;
-        }
+        //     //进入gap
+        //     Debug.Log("gap_enter");
+        //     GameOverTime = Time.time;
+        //     isGameOver = true;
+        //     move_logic = 2;
+        // }
         else if (other.tag == "breakable_barrier") {
             Debug.Log("breakable_barrier");
             if (score < 500)
@@ -282,6 +282,30 @@ public class Character : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "ice_fall")
+        {
+
+            //撞到ice的
+            Debug.Log("ice_fall");
+            GameOverTime = Time.time;
+            isGameOver = true;
+            move_logic = 1;
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "gap_enter") {
+
+            //进入gap
+            Debug.Log("gap_enter");
+            GameOverTime = Time.time;
+            isGameOver = true;
+            move_logic = 2;
+        }
+    }
 
     public static float getLogiHeight(float x) {
         return -x * (x - 2);
