@@ -292,6 +292,9 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 1;
+        } else if (other.gameObject.tag == "end_line")
+        {
+            other.gameObject.GetComponent<GameController>().EndGame(true);
         }
     }
 
