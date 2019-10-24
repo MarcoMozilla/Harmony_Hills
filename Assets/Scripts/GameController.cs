@@ -82,4 +82,16 @@ public class GameController : MonoBehaviour
         completeLevelUI.SetActive(true);
         return;
 	}
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "end_line")
+        {
+            upper_text = completeLevelUI.transform.Find("Level").GetComponent<Text>();
+            upper_text.text = "Home";
+            lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
+            lower_text.text = "Arrived";
+        }
+        completeLevelUI.SetActive(true);
+    }
 }
