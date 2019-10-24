@@ -19,11 +19,11 @@ public class GameController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            if (Input.GetKeyDown(KeyCode.JoystickButton0))
+            if (Input.GetKeyDown(KeyCode.JoystickButton18))
             {
                 PlayGame();
             }
-            if (Input.GetKeyDown(KeyCode.JoystickButton1))
+            if (Input.GetKeyDown(KeyCode.JoystickButton19))
             {
                 Quit();
             }
@@ -31,12 +31,12 @@ public class GameController : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "MusicSurf")
         {
-            if (Input.GetKeyDown(KeyCode.JoystickButton0))
+            if (Input.GetKeyDown(KeyCode.JoystickButton18))
             {
 
                 Restart();
             }
-            if (Input.GetKeyDown(KeyCode.JoystickButton1))
+            if (Input.GetKeyDown(KeyCode.JoystickButton19))
             {
                 SwitchToMenu();
             }

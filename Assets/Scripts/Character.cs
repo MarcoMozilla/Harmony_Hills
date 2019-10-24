@@ -49,6 +49,7 @@ public class Character : MonoBehaviour
     public float GameOverTime;
     public bool isGameOver;
 
+
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
@@ -143,27 +144,47 @@ public class Character : MonoBehaviour
 
         // keyboard input
 
-        if (Input.GetKeyDown("left"))
+        
+        if (Input.GetAxis("XAxis") < -0.5f)
         {
-
+            nextpos = -1;
+        }
+        else if (Input.GetAxis("XAxis") > 0.5f)
+        {
+            nextpos = 1;
+        }
+        else
+        {
+            nextpos = 0;
+        }
+        
+        /*
+        if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
+        {
             if (nextpos - 1 >= -1)
             {
                 nextpos = nextpos - 1;
                 start_shift_time = Time.time;
             }
         }
-        //if (Input.GetKeyDown(KeyCode.JoystickButton8) || Input.GetKeyDown("right"))
-        if (Input.GetKeyDown("right") )
+
+        if (Input.GetKeyDown(KeyCode.JoystickButton8) || Input.GetKeyDown("right"))
         {
             if (nextpos + 1 <= 1)
             {
                 nextpos = nextpos + 1;
                 start_shift_time = Time.time;
             }
-         
         }
+        */
 
-        if (Input.GetKeyDown(KeyCode.Space) && !jumping )
+        //if (Math.Abs(Input.GetAxis("DPadX")) < EPSILON)
+        //{
+        //    AxisActive = false;
+        //}
+        
+
+        if ((Input.GetKeyDown(KeyCode.JoystickButton16) || Input.GetKeyDown(KeyCode.Space)) && !jumping )
         {
             Debug.Log("test jump");
             start_jump_time = Time.time;
@@ -311,7 +332,7 @@ public class Character : MonoBehaviour
     }
 
     public static float getLogiHeight(float x) {
-        return -x * (x - 2);
+        return 0.5f * -x * (x - 2);
     }
     
 

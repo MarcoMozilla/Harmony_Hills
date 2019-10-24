@@ -5535,7 +5535,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry (Press A)
+  m_Text: Retry (Press X)
 --- !u!222 &293608550
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7919,7 +7919,7 @@ PrefabInstance:
     - target: {fileID: 5745243359622951506, guid: ea1506e2f9eee4848ac15707982e3719,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -131.14
+      value: -130.71
       objectReference: {fileID: 0}
     - target: {fileID: 5745243359622951506, guid: ea1506e2f9eee4848ac15707982e3719,
         type: 3}
@@ -12676,12 +12676,12 @@ PrefabInstance:
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -143.658
+      value: -143.095
       objectReference: {fileID: 0}
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 424.474
+      value: 425.192
       objectReference: {fileID: 0}
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
@@ -13465,7 +13465,7 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0.1
   m_Range: 100000
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
@@ -17090,7 +17090,7 @@ MonoBehaviour:
   AxisActive: 0
   move_period: 0.1
   speed: 1
-  jump_height: 10
+  jump_height: 5
   jump_period: 0.5
   move_logic: 0
   idx_hidx: {x: 0, y: 0}
@@ -20826,12 +20826,12 @@ PrefabInstance:
     - target: {fileID: 5745243359622951506, guid: ea1506e2f9eee4848ac15707982e3719,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -139.394
+      value: -138.61
       objectReference: {fileID: 0}
     - target: {fileID: 5745243359622951506, guid: ea1506e2f9eee4848ac15707982e3719,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 413.596
+      value: 414.43
       objectReference: {fileID: 0}
     - target: {fileID: 5745243359622951506, guid: ea1506e2f9eee4848ac15707982e3719,
         type: 3}
@@ -21960,12 +21960,12 @@ PrefabInstance:
     - target: {fileID: 1173925112080760359, guid: d91427da45d3047478adf392a20fe6e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.59
+      value: -3.76
       objectReference: {fileID: 0}
     - target: {fileID: 1173925112080760359, guid: d91427da45d3047478adf392a20fe6e8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24
+      value: 24.93
       objectReference: {fileID: 0}
     - target: {fileID: 1173925112080760359, guid: d91427da45d3047478adf392a20fe6e8,
         type: 3}
@@ -22010,7 +22010,7 @@ PrefabInstance:
     - target: {fileID: 1173925112080760359, guid: d91427da45d3047478adf392a20fe6e8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3625
+      value: 0.44281247
       objectReference: {fileID: 0}
     - target: {fileID: 3003760596295932301, guid: d91427da45d3047478adf392a20fe6e8,
         type: 3}
@@ -23110,17 +23110,17 @@ PrefabInstance:
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.115
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.549
+      value: 2.44
       objectReference: {fileID: 0}
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.82
+      value: 25.16
       objectReference: {fileID: 0}
     - target: {fileID: 2957097502494428718, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
@@ -29118,7 +29118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu (Press B)
+  m_Text: Menu (Press Y)
 --- !u!222 &1840890628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30461,7 +30461,7 @@ PrefabInstance:
     - target: {fileID: 1100714310257898134, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.89
+      value: 29.8
       objectReference: {fileID: 0}
     - target: {fileID: 1100714310257898134, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
@@ -30516,7 +30516,7 @@ PrefabInstance:
     - target: {fileID: 1100714310257898134, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.86653507
+      value: 0.5395654
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa, type: 3}
@@ -33202,7 +33202,7 @@ PrefabInstance:
     - target: {fileID: 1100714310257898134, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75544083
+      value: 0.46849138
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b744dc5f5cb9f2d4ca440c8b9e9e05fa, type: 3}
