@@ -49,7 +49,7 @@ public class Character : MonoBehaviour
     public float GameOverTime;
     public bool isGameOver;
 
-
+    public Animator charAnim;
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
@@ -68,12 +68,12 @@ public class Character : MonoBehaviour
         start_time = Time.time;
 
         isGameOver = false;
-
+        charAnim = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
-
+        charAnim.Play("Take 001");
         if (move_logic == 0)
         {
             idx_hidx[0] = (float)(Time.time - start_time) * speed;
