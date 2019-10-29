@@ -144,7 +144,7 @@ public class Character : MonoBehaviour
 
         // keyboard input
 
-        
+        /*
         if (Input.GetAxis("XAxis") < -0.5f)
         {
             nextpos = -1;
@@ -157,8 +157,8 @@ public class Character : MonoBehaviour
         {
             nextpos = 0;
         }
+        */
         
-        /*
         if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
         {
             if (nextpos - 1 >= -1)
@@ -176,7 +176,7 @@ public class Character : MonoBehaviour
                 start_shift_time = Time.time;
             }
         }
-        */
+        
 
         //if (Math.Abs(Input.GetAxis("DPadX")) < EPSILON)
         //{
