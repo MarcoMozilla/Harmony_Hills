@@ -268,23 +268,6 @@ public class Character : MonoBehaviour
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
         }
-        // else if (other.tag == "ice_fall")
-        // {
-
-        //     //撞到ice的
-        //     Debug.Log("ice_fall");
-        //     GameOverTime = Time.time;
-        //     isGameOver = true;
-        //     move_logic = 1;
-        // }
-        // else if (other.tag == "gap_enter") {
-
-        //     //进入gap
-        //     Debug.Log("gap_enter");
-        //     GameOverTime = Time.time;
-        //     isGameOver = true;
-        //     move_logic = 2;
-        // }
         else if (other.tag == "breakable_barrier") {
             Debug.Log("breakable_barrier");
             if (score < 500)
@@ -297,7 +280,9 @@ public class Character : MonoBehaviour
                 Debug.Log("breakable_barrier: break");
                 score -= 500;
                 energy_txt.text = "Energy: " + score;
-                Destroy(other.gameObject);
+                //Destroy(other.gameObject);
+                GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
+                Destroy(Tree_w_Icicles);
             }
         }
 
