@@ -17,6 +17,8 @@ TagManager:
   - gap_enter
   - breakable_barrier
   - end_line
+  - Fire
+  - unbreakable_barrier
   layers:
   - Default
   - TransparentFX

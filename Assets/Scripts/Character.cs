@@ -285,7 +285,12 @@ public class Character : MonoBehaviour
                 Destroy(Tree_w_Icicles);
             }
         }
-
+        else if (other.tag == "unbreakable_barrier") {
+            Debug.Log("unbreakable_barrier");
+            Debug.Log("You die");
+            other.gameObject.GetComponent<GameController>().EndGame(false);
+            move_logic = 1;
+        }
     }
 
     void OnCollisionEnter(Collision other)
