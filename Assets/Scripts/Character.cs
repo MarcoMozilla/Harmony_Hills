@@ -263,14 +263,14 @@ public class Character : MonoBehaviour
     {
         if (other.tag == "music_note")
         {
-            score += 50;
+            score += 10;
             energy_txt.text = "Energy: " + score;
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
         }
         else if (other.tag == "breakable_barrier") {
             Debug.Log("breakable_barrier");
-            if (score < 500)
+            if (score < 100)
             {
                 Debug.Log("You die");
                 other.gameObject.GetComponent<GameController>().EndGame(false);
@@ -278,7 +278,7 @@ public class Character : MonoBehaviour
             } else 
             {
                 Debug.Log("breakable_barrier: break");
-                score -= 500;
+                score -= 100;
                 energy_txt.text = "Energy: " + score;
                 //Destroy(other.gameObject);
                 GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
