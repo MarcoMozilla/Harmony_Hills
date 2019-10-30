@@ -68,13 +68,13 @@ public class Music_Note_scpt: MonoBehaviour
                 fscpt.endpos = light.transform.position;
                 fscpt.light_idx = this.idx;
 
-                GameObject flare = Instantiate(myPrefab, fscpt.beginpos, Quaternion.identity);
+                // GameObject flare = Instantiate(myPrefab, fscpt.beginpos, Quaternion.identity);
 
             }
 
            
             
-            //Lamp_Light_scpt.turn_on_lights(this.idx);
+            Lamp_Light_scpt.turn_on_lights(this.idx);
 
         }
     }

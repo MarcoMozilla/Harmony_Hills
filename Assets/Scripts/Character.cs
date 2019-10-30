@@ -20,8 +20,8 @@ public class Character : MonoBehaviour
     // smooth shift 
     public float move_period;
     private float hori_pos;
-    private int curpos;
-    private int nextpos;
+    private float curpos;
+    private float nextpos;
     private float start_shift_time;
 
 
@@ -158,6 +158,10 @@ public class Character : MonoBehaviour
             nextpos = 0;
         }
         */
+
+        nextpos = Input.GetAxis("XAxis");
+
+        /*
         
         if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
         {
@@ -176,13 +180,13 @@ public class Character : MonoBehaviour
                 start_shift_time = Time.time;
             }
         }
-        
+        */
 
         //if (Math.Abs(Input.GetAxis("DPadX")) < EPSILON)
         //{
         //    AxisActive = false;
         //}
-        
+
 
         if ((Input.GetKeyDown(KeyCode.JoystickButton16) || Input.GetKeyDown(KeyCode.Space)) && !jumping )
         {
