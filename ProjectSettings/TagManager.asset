@@ -19,6 +19,8 @@ TagManager:
   - end_line
   - Fire
   - unbreakable_barrier
+  - checkpoint1
+  - level_text
   layers:
   - Default
   - TransparentFX
