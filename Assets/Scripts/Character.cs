@@ -69,11 +69,12 @@ public class Character : MonoBehaviour
 
         isGameOver = false;
         charAnim = GetComponent<Animator>();
+        // charAnim.Play("character_l");
     }
     // Update is called once per frame
     void Update()
     {
-        charAnim.Play("Take 001");
+        //charAnim.Play("Take 001");
         if (move_logic == 0)
         {
             idx_hidx[0] = (float)(Time.time - start_time) * speed;
@@ -159,7 +160,18 @@ public class Character : MonoBehaviour
         }
         */
 
-        nextpos = Input.GetAxis("XAxis");
+        nextpos = Input.GetAxis("Horizontal");
+        Debug.Log(nextpos);
+        charAnim.SetFloat("nextpos", nextpos);
+        if (nextpos < 0){
+            charAnim.Play("character_l");
+        }
+        else if (nextpos > 0){
+            charAnim.Play("character_r");
+        }
+        else{
+            charAnim.Play("routine");
+        }
 
         /*
         
