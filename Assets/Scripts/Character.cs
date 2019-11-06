@@ -206,8 +206,10 @@ public class Character : MonoBehaviour
             start_jump_time = Time.time;
             jumping = true;
         }
-
-
+        charAnim.SetBool("jumping", jumping);
+        if (jumping){
+            charAnim.Play("character_jump");
+        }
         /*
         if (Input.inputString != "") Debug.Log(Input.inputString);
 
