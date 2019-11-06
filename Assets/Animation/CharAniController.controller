@@ -141,7 +141,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 1827226128182048838, guid: e0a4a784c5a90460cb8e55fa3a7ed313,
+    type: 3}
   m_Tag: character_r
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -161,13 +162,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -230,7 +231,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 1827226128182048838, guid: 64285a7fc0f074c45804bbdba93f4e1d,
+    type: 3}
   m_Tag: character_l
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -302,7 +304,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 1827226128182048838, guid: 3e59a3316b0954caebfa52ff6d0487c3,
+    type: 3}
   m_Tag: character_jump
   m_SpeedParameter: 
   m_MirrorParameter: 
