@@ -3894,7 +3894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &127843481
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -17648,6 +17648,21 @@ PrefabInstance:
       propertyPath: idx
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 1843987693447265213, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_Mesh
@@ -17668,21 +17683,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142723309520884532, guid: c1358898a0264c343bf6ab8829ee9e63,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1358898a0264c343bf6ab8829ee9e63, type: 3}
@@ -30705,7 +30705,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 0.66
   m_Range: 100000
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
@@ -36315,7 +36315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1025389905
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -45622,6 +45622,11 @@ PrefabInstance:
       propertyPath: idx
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3319106474275483429, guid: c1358898a0264c343bf6ab8829ee9e63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.17
+      objectReference: {fileID: 0}
     - target: {fileID: 1843987693447265213, guid: c1358898a0264c343bf6ab8829ee9e63,
         type: 3}
       propertyPath: m_Mesh
@@ -45642,11 +45647,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319106474275483429, guid: c1358898a0264c343bf6ab8829ee9e63,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1358898a0264c343bf6ab8829ee9e63, type: 3}
@@ -52410,7 +52410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1641016986
 Transform:
   m_ObjectHideFlags: 0
@@ -71175,6 +71175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: level_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591077043869352579, guid: 18293703c2a034cffa9e7bae010fd63d,
+        type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3591077043869352580, guid: 18293703c2a034cffa9e7bae010fd63d,
         type: 3}
