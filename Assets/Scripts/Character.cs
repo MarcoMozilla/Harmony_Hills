@@ -162,7 +162,7 @@ public class Character : MonoBehaviour
 
         nextpos = Input.GetAxis("Horizontal");
         Debug.Log(nextpos);
-        charAnim.SetFloat("nextpos", nextpos);
+        //charAnim.SetFloat("nextpos", nextpos);
         if (nextpos < 0){
             charAnim.Play("character_l");
         }
@@ -206,7 +206,7 @@ public class Character : MonoBehaviour
             start_jump_time = Time.time;
             jumping = true;
         }
-        charAnim.SetBool("jumping", jumping);
+        // charAnim.SetBool("jumping", jumping);
         if (jumping){
             charAnim.Play("character_jump");
         }
