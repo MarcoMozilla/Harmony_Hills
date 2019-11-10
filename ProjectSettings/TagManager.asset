@@ -21,6 +21,8 @@ TagManager:
   - unbreakable_barrier
   - checkpoint1
   - level_text
+  - snow_ball_ui
+  - snow_balls_ui
   layers:
   - Default
   - TransparentFX

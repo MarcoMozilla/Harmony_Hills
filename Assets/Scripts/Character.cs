@@ -14,7 +14,7 @@ public class Character : MonoBehaviour
     float distanceTravelled;
     private TMP_Text tone_text;
     public int tone = 0;
-    public int score = 0;
+    public static int score = 0;
     public bool AxisActive = false;
 
     // smooth shift 
@@ -50,6 +50,7 @@ public class Character : MonoBehaviour
     public bool isGameOver;
 
     public Animator charAnim;
+    public GameObject snowballs_ui;
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
@@ -69,6 +70,7 @@ public class Character : MonoBehaviour
 
         isGameOver = false;
         charAnim = GetComponent<Animator>();
+        score = 0;
         // charAnim.Play("character_l");
     }
     // Update is called once per frame
@@ -281,14 +283,16 @@ public class Character : MonoBehaviour
     {
         if (other.tag == "music_note")
         {
-            score += 10;
+            score += 1;
             energy_txt.text = "Energy: " + score;
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
+            int index = Character.score % 11;
+            Snow_balls_ui.hit(index);
         }
         else if (other.tag == "breakable_barrier") {
             Debug.Log("breakable_barrier");
-            if (score < 100)
+            if (score < 10)
             {
                 Debug.Log("You die");
                 other.gameObject.GetComponent<GameController>().EndGame(false);
@@ -296,7 +300,7 @@ public class Character : MonoBehaviour
             } else 
             {
                 Debug.Log("breakable_barrier: break");
-                score -= 100;
+                score -= 10;
                 energy_txt.text = "Energy: " + score;
                 //Destroy(other.gameObject);
                 GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
