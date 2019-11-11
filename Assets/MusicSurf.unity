@@ -1510,6 +1510,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &30950961
@@ -7481,6 +7486,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &235525975
@@ -20014,6 +20024,11 @@ PrefabInstance:
       propertyPath: lower_text
       value: 
       objectReference: {fileID: 144161223}
+    - target: {fileID: 5363535559175992583, guid: 7b909620aecf7401a9789970d06446af,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     - target: {fileID: 4361303385999116900, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23121,6 +23136,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &597939920
@@ -24524,6 +24544,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &637143931
@@ -44136,6 +44161,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &1292783767
@@ -44977,6 +45007,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &1328279718
@@ -49662,6 +49697,7 @@ MonoBehaviour:
   completeLevelUI: {fileID: 563977023}
   upper_text: {fileID: 691314589}
   lower_text: {fileID: 144161223}
+  snow_balls_ui: {fileID: 0}
 --- !u!4 &1528994603
 Transform:
   m_ObjectHideFlags: 0
@@ -53861,6 +53897,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5363535559175992583, guid: 7b909620aecf7401a9789970d06446af,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     - target: {fileID: 4361303385999116900, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54307,6 +54348,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &1681184054
@@ -56343,6 +56389,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5000807986908713602, guid: 43e0eb0d76bd54f1f93c87ea5338cd56,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e0eb0d76bd54f1f93c87ea5338cd56, type: 3}
 --- !u!1001 &1728766894
@@ -62771,7 +62822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814552853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12337573, y: 0.3094684, z: 14.672173}
+  m_LocalPosition: {x: 0.12337573, y: 0.5, z: 13.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 194189683}
@@ -65542,6 +65593,11 @@ PrefabInstance:
       propertyPath: level_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5363535559175992583, guid: 7b909620aecf7401a9789970d06446af,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     - target: {fileID: 4361303385999116900, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71568,6 +71624,11 @@ PrefabInstance:
       propertyPath: lower_text
       value: 
       objectReference: {fileID: 144161223}
+    - target: {fileID: 5363535559175992583, guid: 7b909620aecf7401a9789970d06446af,
+        type: 3}
+      propertyPath: snow_balls_ui
+      value: 
+      objectReference: {fileID: 464567475993631708}
     - target: {fileID: 4361303385999116900, guid: 7b909620aecf7401a9789970d06446af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72237,7 +72298,7 @@ PrefabInstance:
     - target: {fileID: 2451555180081331495, guid: 17203f11555b8400aaccdd571ec057e1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -44
       objectReference: {fileID: 0}
     - target: {fileID: 2451555180081331495, guid: 17203f11555b8400aaccdd571ec057e1,
         type: 3}
