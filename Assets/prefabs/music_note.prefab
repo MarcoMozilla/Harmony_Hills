@@ -1300,11 +1300,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7142723309520884532}
     m_Modifications:
-    - target: {fileID: 6683440583898584851, guid: 047bb0aa5574f4e78b4568076e219f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: SnowFlake
-      objectReference: {fileID: 0}
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,6 +1370,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6683440583898584851, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: SnowFlake
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081559319170337830, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f9c633eb88d41843bbe0db3e5f7b096, type: 2}
+    - target: {fileID: 2595163277259770833, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f9c633eb88d41843bbe0db3e5f7b096, type: 2}
+    - target: {fileID: 5921950312761585442, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f9c633eb88d41843bbe0db3e5f7b096, type: 2}
+    - target: {fileID: 1398171538129469484, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f9c633eb88d41843bbe0db3e5f7b096, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047bb0aa5574f4e78b4568076e219f4d, type: 3}
 --- !u!4 &2099736571044668972 stripped

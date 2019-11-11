@@ -18,11 +18,11 @@ public class Character : MonoBehaviour
     public bool AxisActive = false;
 
     // smooth shift 
-    public float move_period;
+    public static float move_period;
     private float hori_pos;
     private float curpos;
     private float nextpos;
-    private float start_shift_time;
+    public float start_shift_time;
 
 
     //speed
@@ -46,11 +46,17 @@ public class Character : MonoBehaviour
     public Vector2 idx_hidx;
     public Text energy_txt;
     public static float start_time;
+    public static float time_leak;
     public float GameOverTime;
     public bool isGameOver;
-
+    public static int track;
     public Animator charAnim;
     public GameObject snowballs_ui;
+
+
+    private void Awake()
+    {
+    }
     void Start()
     {
         //pathCreatorSelected = pathCreatorMiddle;
@@ -66,7 +72,7 @@ public class Character : MonoBehaviour
         //jump
         jumping = false;
         curjump_height = 0;
-        start_time = Time.time;
+        time_leak = Time.time - start_time;
 
         isGameOver = false;
         charAnim = GetComponent<Animator>();
@@ -79,7 +85,7 @@ public class Character : MonoBehaviour
         //charAnim.Play("Take 001");
         if (move_logic == 0)
         {
-            idx_hidx[0] = (float)(Time.time - start_time) * speed;
+            idx_hidx[0] = (float)(Time.time - start_time - time_leak) * speed + track;
             idx_hidx[1] = hori_pos;
             int idx = Path_Node_scpt.idx_float2int(idx_hidx[0]);
             int hidx = Path_Node_scpt.hidx_float2int(idx_hidx[1]);
@@ -163,7 +169,7 @@ public class Character : MonoBehaviour
         */
 
         nextpos = Input.GetAxis("Horizontal");
-        Debug.Log(nextpos);
+        //Debug.Log(nextpos);
         //charAnim.SetFloat("nextpos", nextpos);
         if (nextpos < 0){
             charAnim.Play("character_l");
@@ -308,7 +314,7 @@ public class Character : MonoBehaviour
             }
         }
         else if (other.tag == "unbreakable_barrier") {
-            Debug.Log("unbreakable_barrier");
+            //Debug.Log("unbreakable_barrier");
             Debug.Log("You die");
             other.gameObject.GetComponent<GameController>().EndGame(false);
             move_logic = 1;

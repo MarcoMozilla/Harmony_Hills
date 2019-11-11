@@ -10,6 +10,15 @@ public class GameController : MonoBehaviour
     public GameObject completeLevelUI;
     public Text upper_text;
     public Text lower_text;
+    private Character char_scpt;
+
+
+    private void Start()
+    {
+        GameObject obj = GameObject.Find("Character");
+        char_scpt = obj.GetComponent<Character>();
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene("MusicSurf");
@@ -78,6 +87,13 @@ public class GameController : MonoBehaviour
             upper_text.text = "Lost";
             lower_text = completeLevelUI.transform.Find("Complete").GetComponent<Text>();
             lower_text.text = "Try Again";
+            Character.start_time = Time.time;
+
+
+            if (char_scpt.idx_hidx[0] > 4) {    
+                Character.track = 3;
+            }
+
         }
         completeLevelUI.SetActive(true);
         return;

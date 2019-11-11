@@ -20,8 +20,8 @@ public class Snow_balls_ui : MonoBehaviour
     // Update is called once per frame
     public static void hit(int index)
     {
-        Debug.Log("snow_ball_uis");
-        Debug.Log(snow_ball_uis.Length);
+        //Debug.Log("snow_ball_uis");
+        //Debug.Log(snow_ball_uis.Length);
         //int index = Character.score % 10;
         //Debug.Log(index);
         // for (int i = 0; i < 10; i++) {
