@@ -21,15 +21,16 @@ public class snowball_scpt : MonoBehaviour
 
 
 
-        if (Time.time - startTime > 2) {
+        if (Time.time - startTime > 5) {
             Destroy(this.gameObject);
         }
     }
 
 
-    private void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "breakable_ice") {
+            Debug.Log("snow ball hit ice");
 
             Destroy(other.gameObject);
         }
