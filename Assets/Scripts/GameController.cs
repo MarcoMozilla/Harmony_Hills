@@ -92,6 +92,10 @@ public class GameController : MonoBehaviour
 
             if (char_scpt.idx_hidx[0] <= 45) {    
                 Character.track = 0;
+            } else if (45 < char_scpt.idx_hidx[0] && char_scpt.idx_hidx[0] <= 106){
+                Character.track = 45;
+            } else {
+                Character.track = 106;
             }
 
         }
