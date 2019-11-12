@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicClip: {fileID: 0}
-  MusicSource: {fileID: 0}
   tone: 0
   idx: 0
   myPrefab: {fileID: 3380963142775374254, guid: 40be69a1124b1ba4ca50624ef5c1a399,
@@ -848,7 +847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6312505294349089346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3294557201561816215}
@@ -1255,16 +1254,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 1414472479886281260, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1746898920361305475, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3379969243771496236, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1276,6 +1265,16 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8075921420993846601, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746898920361305475, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414472479886281260, guid: 50b33df7b3e1d6f40a1e4673f1615b8e,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -1300,11 +1299,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7142723309520884532}
     m_Modifications:
-    - target: {fileID: 6683440583898584851, guid: 047bb0aa5574f4e78b4568076e219f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: SnowFlake
-      objectReference: {fileID: 0}
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.46
+      value: -6.34
       objectReference: {fileID: 0}
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
@@ -1363,17 +1357,22 @@ PrefabInstance:
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7681733675698005248, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683440583898584851, guid: 047bb0aa5574f4e78b4568076e219f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: SnowFlake
       objectReference: {fileID: 0}
     - target: {fileID: 9081559319170337830, guid: 047bb0aa5574f4e78b4568076e219f4d,
         type: 3}

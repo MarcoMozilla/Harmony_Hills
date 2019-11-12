@@ -290,7 +290,7 @@ public class Character : MonoBehaviour
         if (other.tag == "music_note")
         {
             score += 1;
-            energy_txt.text = "Energy: " + score;
+            energy_txt.text = "Snowballs collected: " + score/10;
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
             int index = Character.score % 11;
@@ -307,7 +307,7 @@ public class Character : MonoBehaviour
             {
                 Debug.Log("breakable_barrier: break");
                 score -= 10;
-                energy_txt.text = "Energy: " + score;
+                energy_txt.text = "Snowballs collected: " + score/10;
                 //Destroy(other.gameObject);
                 GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
                 Destroy(Tree_w_Icicles);
@@ -331,6 +331,7 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 1;
+            other.gameObject.GetComponent<GameController>().EndGame(false);
         } else if (other.gameObject.tag == "end_line")
         {
             other.gameObject.GetComponent<GameController>().EndGame(true);
@@ -346,6 +347,7 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 2;
+            other.gameObject.GetComponent<GameController>().EndGame(false);
         }
     }
 
