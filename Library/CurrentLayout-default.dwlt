@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 494}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1440
     height: 784
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 494}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -68,7 +68,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 2 by 3
+  m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 11474
+  controlID: 100
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 11515
+  controlID: 101
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -136.90671, y: -0.17200008, z: -11.067234}
     speed: 2
-    m_Value: {x: -136.90671, y: -0.17200008, z: -11.067234}
+    m_Value: {x: 0.5, y: 0.5, z: 0.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -341,11 +341,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.015059, y: 0.5687478, z: -0.010412551, w: -0.8223139}
     speed: 2
-    m_Value: {x: -0.01505893, y: 0.5687452, z: -0.010412503, w: -0.8223101}
+    m_Value: {x: -0.015059001, y: 0.5687478, z: -0.010412551, w: -0.8223139}
   m_Size:
     m_Target: 1.4289429
     speed: 2
-    m_Value: 1.4289429
+    m_Value: 8.573652
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -481,23 +481,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 341afdff701afdffca1dfdffce1dfdff8423fdffc823fdff7625fdff7a25fdffb228fdfff628fdff4a2cfdff4276fdff1a92fdff3c44feff4244feff5e69feffc0a3fefffae5feff04e6feffe256ffffb0aaffffbaaaffff50f8ffffa86100001a630000ee63000062640000b064000072660000fa6c00005c6d0000726e00004070000018992600b4da26006ce2270056932d0052bf2d0028ba2e0044ba2e00
+      m_SelectedIDs: 68d7ffff
+      m_LastClickedID: -10392
+      m_ExpandedIDs: 66fbffffb64e0000c0510000525d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Snowballstartpoint
-        m_OriginalName: Snowballstartpoint
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 3062340
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -545,8 +545,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/prefabs
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -559,7 +558,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c4470000
     m_LastClickedID: 18372
-    m_ExpandedIDs: ffffffff00000000c44700007a490000564a0000324b0000564b0000544d0000b04e0000da4e00001e4f0000684f0000ee4f0000105000008450000014510000d85100006a54000034550000b6550000ce5600001057000070570000fc570000f4590000545a0000445c0000805c0000f85c0000325d0000825e000000600000
+    m_ExpandedIDs: 00000000d033000086350000623600003e3700006237000060390000be3a0000e83a00002c3b0000763b0000fc3b00001e3c0000923c0000223d0000e63d00007840000042410000c4410000dc4200001e4300007e4300000a4400000246000062460000524800008e4800000649000040490000904a00000e4c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,21 +586,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000c44700007a490000564a0000324b0000564b0000544d0000b04e0000da4e00001e4f0000684f0000ee4f0000105000008450000014510000d85100006a54000034550000b6550000ce5600001057000070570000fc570000f4590000545a0000445c0000805c0000f85c0000325d0000825e000000600000
+    m_ExpandedIDs: ffffffff00000000d033000086350000623600003e3700006237000060390000be3a0000e83a00002c3b0000763b0000fc3b00001e3c0000923c0000223d0000e63d00007840000042410000c4410000dc4200001e4300007e4300000a4400000246000062460000524800008e4800000649000040490000904a00000e4c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: snowballs
-      m_OriginalName: snowballs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 18774
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
