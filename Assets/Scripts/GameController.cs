@@ -90,8 +90,8 @@ public class GameController : MonoBehaviour
             Character.start_time = Time.time;
 
 
-            if (char_scpt.idx_hidx[0] > 4) {    
-                Character.track = 3;
+            if (char_scpt.idx_hidx[0] <= 45) {    
+                Character.track = 0;
             }
 
         }
