@@ -16,7 +16,7 @@ public class MusicNotes : MonoBehaviour
     private PathCreator pathCreatorSelected;
     float distance;
     public AudioClip MusicClip;
-    public AudioSource MusicSource;
+    // public AudioSource MusicSource;
 
     public static System.Random random = new System.Random();
 

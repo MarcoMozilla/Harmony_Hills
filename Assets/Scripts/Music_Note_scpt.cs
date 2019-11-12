@@ -7,7 +7,7 @@ public class Music_Note_scpt: MonoBehaviour
 {
     // Start is called before the first frame update
     public AudioClip MusicClip;
-    public AudioSource MusicSource;
+    // public AudioSource MusicSource;
     public int tone = 0;
     public int idx = 0;
     private TMP_Text tone_text;
@@ -54,7 +54,7 @@ public class Music_Note_scpt: MonoBehaviour
     {
         if (!has_played) {
             //Debug.Log("HIT"+this.idx);
-            MusicSource.Play();
+            // MusicSource.Play();
             Destroy(transform.Find("model3D").gameObject);
             has_played = true;
 
