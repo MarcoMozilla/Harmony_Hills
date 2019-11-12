@@ -175,7 +175,7 @@ public class Character : MonoBehaviour
             charAnim.Play("character_l");
         }
         else if (nextpos > 0){
-            charAnim.Play("character_r");
+            charAnim.Play("character_l");
         }
         else{
             charAnim.Play("routine");
@@ -215,9 +215,9 @@ public class Character : MonoBehaviour
             jumping = true;
         }
         // charAnim.SetBool("jumping", jumping);
-        if (jumping){
-            charAnim.Play("character_jump");
-        }
+        // if (jumping){
+        //     charAnim.Play("character_jump");
+        // }
         /*
         if (Input.inputString != "") Debug.Log(Input.inputString);
 
