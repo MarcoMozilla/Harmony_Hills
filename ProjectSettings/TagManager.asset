@@ -23,6 +23,7 @@ TagManager:
   - level_text
   - snow_ball_ui
   - snow_balls_ui
+  - breakable_ice
   layers:
   - Default
   - TransparentFX

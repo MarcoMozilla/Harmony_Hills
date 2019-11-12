@@ -91,7 +91,7 @@ BoxCollider:
   m_GameObject: {fileID: 4361303385999116896}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   completeLevelUI: {fileID: 0}
   upper_text: {fileID: 0}
   lower_text: {fileID: 0}
+  snow_balls_ui: {fileID: 0}
 --- !u!1001 &1416451696199468259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_w_Icicles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578954512948864424, guid: c3263de20112144759395a225af0d223,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable_ice
       objectReference: {fileID: 0}
     - target: {fileID: 707327952381794235, guid: c3263de20112144759395a225af0d223,
         type: 3}

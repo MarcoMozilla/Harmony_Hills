@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: 46240dc22900f423aaf8828e5591fb50
+  - enabled: 1
+    path: Assets/MusicSurf.unity
+    guid: 323d0e25870b82b4a810b3992d7dcb16
   m_configObjects: {}

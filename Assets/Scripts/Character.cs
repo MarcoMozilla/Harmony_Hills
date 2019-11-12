@@ -54,6 +54,8 @@ public class Character : MonoBehaviour
     public GameObject snowballs_ui;
 
 
+
+
     private void Awake()
     {
     }
@@ -83,6 +85,7 @@ public class Character : MonoBehaviour
     void Update()
     {
         //charAnim.Play("Take 001");
+        energy_txt.text = "Snowballs collected: " + score / 10;
         if (move_logic == 0)
         {
             idx_hidx[0] = (float)(Time.time - start_time - time_leak) * speed + track;
@@ -115,7 +118,7 @@ public class Character : MonoBehaviour
         if (isGameOver && Time.time - GameOverTime > 3)
         {
             Debug.Log("You die");
-            GameController game_controller = GameObject.FindGameObjectWithTag("breakable_barrier").transform.GetComponent<GameController>();
+            GameController game_controller = GameObject.FindGameObjectWithTag("breakable_ice").transform.GetComponent<GameController>();
             game_controller.EndGame(false);
         }
 
@@ -181,6 +184,8 @@ public class Character : MonoBehaviour
             charAnim.Play("routine");
         }
 
+
+
         /*
         
         if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
@@ -214,6 +219,22 @@ public class Character : MonoBehaviour
             start_jump_time = Time.time;
             jumping = true;
         }
+
+
+        // =========================================================================================================
+
+
+
+        if (Input.GetKeyDown("up") && (score/10)>0  ) {
+
+            ThrowSnowBall tscpt = this.transform.Find("Snowballstartpoint").GetComponent<ThrowSnowBall>();
+            tscpt.makeSnowBall();
+
+            score -= 10;
+
+        }
+
+       
         // charAnim.SetBool("jumping", jumping);
         // if (jumping){
         //     charAnim.Play("character_jump");
@@ -222,7 +243,7 @@ public class Character : MonoBehaviour
         if (Input.inputString != "") Debug.Log(Input.inputString);
 
 
-
+       
         float speed = 20;
         distanceTravelled += speed * Time.deltaTime;
         //if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown("left"))
@@ -296,21 +317,21 @@ public class Character : MonoBehaviour
             int index = Character.score % 11;
             Snow_balls_ui.hit(index);
         }
-        else if (other.tag == "breakable_barrier") {
-            Debug.Log("breakable_barrier");
+        else if (other.tag == "breakable_ice") {
+            Debug.Log("breakable_ice");
             if (score < 10)
             {
                 Debug.Log("You die");
-                other.gameObject.GetComponent<GameController>().EndGame(false);
+                other.transform.parent.gameObject.GetComponent<GameController>().EndGame(false);
                 move_logic = 1;
             } else 
             {
-                Debug.Log("breakable_barrier: break");
+                Debug.Log("breakable_ice: break");
                 score -= 10;
-                energy_txt.text = "Snowballs collected: " + score/10;
-                //Destroy(other.gameObject);
-                GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
-                Destroy(Tree_w_Icicles);
+                
+                Destroy(other.gameObject);
+                //GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
+                //Destroy(Tree_w_Icicles);
             }
         }
         else if (other.tag == "unbreakable_barrier") {
