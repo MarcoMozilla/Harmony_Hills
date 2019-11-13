@@ -319,20 +319,20 @@ public class Character : MonoBehaviour
         }
         else if (other.tag == "breakable_ice") {
             Debug.Log("breakable_ice");
-            if (score < 10)
-            {
-                Debug.Log("You die");
-                other.transform.parent.gameObject.GetComponent<GameController>().EndGame(false);
-                move_logic = 1;
-            } else 
-            {
-                Debug.Log("breakable_ice: break");
-                score -= 10;
+            // if (score < 10)
+            // {
+            Debug.Log("You die");
+            other.transform.parent.gameObject.GetComponent<GameController>().EndGame(false);
+            move_logic = 1;
+            // } else 
+            // {
+            //     Debug.Log("breakable_ice: break");
+            //     score -= 10;
                 
-                Destroy(other.gameObject);
+            //     Destroy(other.gameObject);
                 //GameObject Tree_w_Icicles= other.gameObject.transform.Find("Tree_w_Icicles").gameObject;
                 //Destroy(Tree_w_Icicles);
-            }
+            // }
         }
         else if (other.tag == "unbreakable_barrier") {
             //Debug.Log("unbreakable_barrier");

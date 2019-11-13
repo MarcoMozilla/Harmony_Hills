@@ -6,24 +6,24 @@ public class Lamp_Light_scpt : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private float startime;
-    private bool ison;
+    // private float startime;
+    // private bool ison;
     private static Dictionary<int, List<GameObject>> dctn_idx_2_lights;
     public int idx = 0;
     void Start()
     {
 
-        startime = 0f;
-        ison = false;
+        // startime = 0f;
+        // ison = false;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (ison && Time.time - startime > 10) {
-            this.turn_off();
-        }
+        // if (ison && Time.time - startime > 10) {
+        //     this.turn_off();
+        // }
        
 
     }
@@ -31,20 +31,20 @@ public class Lamp_Light_scpt : MonoBehaviour
     public void turn_on()
     {
 
-        GameObject lobj = GameObject.Find("Directional Light");
+        // GameObject lobj = GameObject.Find("Directional Light");
 
-        direct_light_scpt lscpt = lobj.GetComponent<direct_light_scpt>();
+        // direct_light_scpt lscpt = lobj.GetComponent<direct_light_scpt>();
 
-        Light lt = lobj.GetComponent<Light>();
+        // Light lt = lobj.GetComponent<Light>();
 
-        lt.intensity = lscpt.addlight(); 
+        // lt.intensity = lscpt.addlight(); 
 
         this.transform.GetComponent<Light>().enabled = true;
         this.transform.GetComponent<LensFlare>().enabled = true;
         //Debug.Log(this.transform.GetComponent<LensFlare>().enabled = true);
         this.transform.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-        ison = true;
-        startime = Time.time;
+        // ison = true;
+        // startime = Time.time;
     }
 
     public void turn_off()
@@ -53,7 +53,7 @@ public class Lamp_Light_scpt : MonoBehaviour
         transform.GetComponent<Light>().enabled = false;
         transform.GetComponent<LensFlare>().enabled = false;
         transform.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
-        ison = false;
+        // ison = false;
     }
 
     public static void init_dctn_idx_2_lights()

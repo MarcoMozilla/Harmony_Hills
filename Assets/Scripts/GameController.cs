@@ -94,9 +94,12 @@ public class GameController : MonoBehaviour
                 Character.track = 0;
             } else if (45 < char_scpt.idx_hidx[0] && char_scpt.idx_hidx[0] <= 106){
                 Character.track = 45;
+            } else if (char_scpt.idx_hidx[0] == 150) {
+                Character.track = 0;
             } else {
                 Character.track = 106;
             }
+
 
         }
         completeLevelUI.SetActive(true);

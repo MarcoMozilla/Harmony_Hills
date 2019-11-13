@@ -166,10 +166,10 @@ Light:
   m_GameObject: {fileID: 7102204144716055524}
   m_Enabled: 0
   serializedVersion: 9
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 1, g: 0.6073121, b: 0.34509802, a: 1}
-  m_Intensity: 1.52
-  m_Range: 50
+  m_Intensity: 2
+  m_Range: 10
   m_SpotAngle: 50
   m_InnerSpotAngle: 5
   m_CookieSize: 10
@@ -227,8 +227,8 @@ LensFlare:
   m_Enabled: 0
   m_Flare: {fileID: 12100000, guid: 9bdb18c49d114cb4300035184241aa39, type: 2}
   m_Color: {r: 1, g: 0.6073121, b: 0.34509802, a: 1}
-  m_Brightness: 1
-  m_FadeSpeed: 1
+  m_Brightness: 0
+  m_FadeSpeed: 0
   m_IgnoreLayers:
     serializedVersion: 2
     m_Bits: 0
