@@ -224,8 +224,8 @@ public class Character : MonoBehaviour
         // =========================================================================================================
 
 
-
-        if (Input.GetKeyDown("up") && (score/10)>0  ) {
+        if (Input.GetKeyDown(KeyCode.JoystickButton17) && (score/10)>0) {
+        // if (Input.GetKeyDown("up") && (score/10)>0  ) {
 
             ThrowSnowBall tscpt = this.transform.Find("Snowballstartpoint").GetComponent<ThrowSnowBall>();
             tscpt.makeSnowBall();
