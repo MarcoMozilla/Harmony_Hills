@@ -26,7 +26,9 @@ public class ThrowSnowBall : MonoBehaviour
             pos = this.transform.position;
             rot = this.transform.rotation;
         
-        Instantiate(snowball, pos, rot);
+        GameObject obj = Instantiate(snowball, pos, rot);
+        obj.GetComponent<Collider>().enabled = false;
+        obj.GetComponent<Collider>().enabled = true;
 
     }
 }

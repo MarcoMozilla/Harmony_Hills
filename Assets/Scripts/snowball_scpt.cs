@@ -17,6 +17,8 @@ public class snowball_scpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         this.transform.position += this.transform.forward * speed;
 
 
@@ -24,15 +26,17 @@ public class snowball_scpt : MonoBehaviour
         if (Time.time - startTime > 5) {
             Destroy(this.gameObject);
         }
+        
     }
 
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "breakable_ice") {
-            Debug.Log("snow ball hit ice");
+            Debug.Log("snow ball hit ice---");
 
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
