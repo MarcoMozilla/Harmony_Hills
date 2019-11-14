@@ -54,8 +54,6 @@ public class Character : MonoBehaviour
     public GameObject snowballs_ui;
 
 
-
-
     private void Awake()
     {
     }
