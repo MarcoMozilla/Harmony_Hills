@@ -83,7 +83,7 @@ public class Character : MonoBehaviour
     void Update()
     {
         //charAnim.Play("Take 001");
-        energy_txt.text = "Snowballs collected: " + score / 10;
+        // energy_txt.text = "Snowballs collected: " + score / 10;
         if (move_logic == 0)
         {
             idx_hidx[0] = (float)(Time.time - start_time - time_leak) * speed + track;
@@ -309,7 +309,7 @@ public class Character : MonoBehaviour
         if (other.tag == "music_note")
         {
             score += 1;
-            energy_txt.text = "Snowballs collected: " + score/10;
+            // energy_txt.text = "Snowballs collected: " + score/10;
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
             int index = Character.score % 11;
