@@ -60,6 +60,8 @@ public class GameController : MonoBehaviour
 
     public void SwitchToMenu()
     {
+        Character.track = 0;
+        Character.leveltime = 0;
         SceneManager.LoadScene("MainMenu");
     }
 
