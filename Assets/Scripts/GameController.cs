@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public Text lower_text;
     private Character char_scpt;
     public GameObject snow_balls_ui;
+    public GameObject snow_balls_whole_ui;
 
     private void Start()
     {
@@ -113,6 +114,7 @@ public class GameController : MonoBehaviour
         }
         completeLevelUI.SetActive(true);
         snow_balls_ui.SetActive(false);
+        snow_balls_whole_ui.SetActive(false);
         return;
 	}
 }
