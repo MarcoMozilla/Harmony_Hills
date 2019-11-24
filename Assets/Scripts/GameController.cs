@@ -93,11 +93,21 @@ public class GameController : MonoBehaviour
                 Character.track = 0;
             } else if (char_scpt.idx_hidx[0] > 106){
                 Character.track = 106;
+
+                Character.leveltime = 46+59;
             } else if (char_scpt.idx_hidx[0] > 45){
                 Character.track = 45;
+
+               
+                Character.leveltime = 46;
             } else {
                 Character.track = 0;
+                Character.leveltime = 0;
+                //MusicController mc = GameObject.Find("MusicObject").GetComponent<MusicController>();
+                //mc.asrc.time = 0;
             }
+            MusicController mc = GameObject.Find("MusicObject").GetComponent<MusicController>();
+            mc.asrc.Stop();
         }
         completeLevelUI.SetActive(true);
         snow_balls_ui.SetActive(false);

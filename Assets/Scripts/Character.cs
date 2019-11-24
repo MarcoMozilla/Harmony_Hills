@@ -54,6 +54,9 @@ public class Character : MonoBehaviour
     public GameObject snowballs_ui;
 
 
+
+    public static int leveltime = 0;
+
     private void Awake()
     {
     }
@@ -78,6 +81,12 @@ public class Character : MonoBehaviour
         charAnim = GetComponent<Animator>();
         score = 0;
         // charAnim.Play("character_l");
+
+        MusicController mc = GameObject.Find("MusicObject").GetComponent<MusicController>();
+        mc.asrc.time = leveltime;
+        mc.asrc.Play();
+
+        Debug.Log(mc.asrc.time);
     }
     // Update is called once per frame
     void Update()
