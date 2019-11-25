@@ -93,14 +93,14 @@ public class GameController : MonoBehaviour
 
             if (char_scpt.idx_hidx[0] > 148) {
                 Character.track = 0;
+                //level time is the for track music
+                Character.leveltime = 0;
+
             } else if (char_scpt.idx_hidx[0] > 106){
                 Character.track = 106;
-
                 Character.leveltime = 46+59;
             } else if (char_scpt.idx_hidx[0] > 45){
                 Character.track = 45;
-
-               
                 Character.leveltime = 46;
             } else {
                 Character.track = 0;
