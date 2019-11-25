@@ -53,8 +53,6 @@ public class Character : MonoBehaviour
     public Animator charAnim;
     public GameObject snowballs_ui;
 
-
-
     public static int leveltime = 0;
 
     private void Awake()
@@ -322,6 +320,7 @@ public class Character : MonoBehaviour
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
             int index = Character.score % 11;
+            // AudioSource ice_break_long = GameObject.Find("MusicSnowFlake").GetComponent<AudioSource>();
             Snow_balls_ui.hit(index);
         }
         else if (other.tag == "breakable_ice") {
@@ -379,6 +378,8 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 2;
+            AudioSource music_fall = GameObject.Find("MusicFall").GetComponent<AudioSource>();
+            music_fall.Play();
             // other.gameObject.GetComponent<GameController>().EndGame(false);
         }
     }

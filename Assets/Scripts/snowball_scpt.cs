@@ -9,6 +9,7 @@ public class snowball_scpt : MonoBehaviour
     public float speed;
 
     private float startTime;
+    public AudioSource ice_break;
     void Start()
     {
         startTime = Time.time;
@@ -32,9 +33,17 @@ public class snowball_scpt : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "breakable_ice" || other.tag == "ice_fall") {
+        if (other.tag == "breakable_ice") {
             Debug.Log("snow ball hit ice---");
-
+            AudioSource ice_break_long = GameObject.Find("MusicIceLong").GetComponent<AudioSource>();
+            ice_break_long.Play();
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (other.tag == "ice_fall"){
+            Debug.Log("snow ball hit ice---");
+            AudioSource ice_break_short = GameObject.Find("MusicIceShort").GetComponent<AudioSource>();
+            ice_break_short.Play();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }

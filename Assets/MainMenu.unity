@@ -1155,6 +1155,8 @@ MonoBehaviour:
   completeLevelUI: {fileID: 0}
   upper_text: {fileID: 0}
   lower_text: {fileID: 0}
+  snow_balls_ui: {fileID: 0}
+  snow_balls_whole_ui: {fileID: 0}
 --- !u!4 &1942464905
 Transform:
   m_ObjectHideFlags: 0

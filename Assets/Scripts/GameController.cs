@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     private Character char_scpt;
     public GameObject snow_balls_ui;
     public GameObject snow_balls_whole_ui;
-
     private void Start()
     {
         GameObject obj = GameObject.Find("Character");
