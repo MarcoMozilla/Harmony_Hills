@@ -32,7 +32,7 @@ public class snowball_scpt : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "breakable_ice") {
+        if (other.tag == "breakable_ice" || other.tag == "ice_fall") {
             Debug.Log("snow ball hit ice---");
 
             Destroy(other.gameObject);

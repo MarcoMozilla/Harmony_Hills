@@ -125,7 +125,7 @@ public class Character : MonoBehaviour
         if (isGameOver && Time.time - GameOverTime > 3)
         {
             Debug.Log("You die");
-            GameController game_controller = GameObject.FindGameObjectWithTag("breakable_ice").transform.GetComponent<GameController>();
+            GameController game_controller = GameObject.FindGameObjectWithTag("end_line").transform.GetComponent<GameController>();
             game_controller.EndGame(false);
         }
 
@@ -329,7 +329,9 @@ public class Character : MonoBehaviour
             // if (score < 10)
             // {
             Debug.Log("You die");
-            other.transform.parent.gameObject.GetComponent<GameController>().EndGame(false);
+            GameOverTime = Time.time;
+            isGameOver = true;
+            // other.transform.parent.gameObject.GetComponent<GameController>().EndGame(false);
             move_logic = 1;
             // } else 
             // {
@@ -344,7 +346,9 @@ public class Character : MonoBehaviour
         else if (other.tag == "unbreakable_barrier") {
             //Debug.Log("unbreakable_barrier");
             Debug.Log("You die");
-            other.gameObject.GetComponent<GameController>().EndGame(false);
+            GameOverTime = Time.time;
+            isGameOver = true;
+            // other.gameObject.GetComponent<GameController>().EndGame(false);
             move_logic = 1;
         }
     }
@@ -359,7 +363,7 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 1;
-            other.gameObject.GetComponent<GameController>().EndGame(false);
+            // other.gameObject.GetComponent<GameController>().EndGame(false);
         } else if (other.gameObject.tag == "end_line")
         {
             other.gameObject.GetComponent<GameController>().EndGame(true);
@@ -375,7 +379,7 @@ public class Character : MonoBehaviour
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 2;
-            other.gameObject.GetComponent<GameController>().EndGame(false);
+            // other.gameObject.GetComponent<GameController>().EndGame(false);
         }
     }
 
