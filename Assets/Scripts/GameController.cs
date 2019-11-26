@@ -128,6 +128,7 @@ public class GameController : MonoBehaviour
     }
     public void SwitchToTutorial3()
     {
+        
         SceneManager.LoadScene("Tutorial3");
     }
 }
