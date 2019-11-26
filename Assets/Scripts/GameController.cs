@@ -116,4 +116,18 @@ public class GameController : MonoBehaviour
         snow_balls_whole_ui.SetActive(false);
         return;
 	}
+
+    public void SwitchToTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void SwitchToTutorial2()
+    {
+        SceneManager.LoadScene("Tutorial2");
+    }
+    public void SwitchToTutorial3()
+    {
+        SceneManager.LoadScene("Tutorial3");
+    }
 }

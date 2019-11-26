@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MusicSurf.unity
     guid: 323d0e25870b82b4a810b3992d7dcb16
+  - enabled: 1
+    path: Assets/Tutorial.unity
+    guid: d34c997de99c2469ebbbe3113c275d13
+  - enabled: 1
+    path: Assets/Tutorial2.unity
+    guid: 1f8b49a8dde76478f82874f6639e5ba8
+  - enabled: 1
+    path: Assets/Tutorial3.unity
+    guid: 90f31dbc6c0da4de19b95a7efb4ad102
   m_configObjects: {}
