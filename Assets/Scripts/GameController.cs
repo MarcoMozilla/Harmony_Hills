@@ -36,18 +36,60 @@ public class GameController : MonoBehaviour
             {
                 Quit();
             }
+            if (Input.GetKeyDown(KeyCode.JoystickButton16))
+            {
+                SwitchToTutorial();
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "MusicSurf")
         {
             if (Input.GetKeyDown(KeyCode.JoystickButton18))
             {
-
                 Restart();
             }
             if (Input.GetKeyDown(KeyCode.JoystickButton19))
             {
                 SwitchToMenu();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Tutorial") 
+        {
+            if (Input.GetKeyDown(KeyCode.JoystickButton18))
+            {
+                SwitchToMenu();
+            }
+            if (Input.GetKeyDown(KeyCode.JoystickButton16))
+            {
+                SwitchToTutorial2();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Tutorial2") 
+        {
+            if (Input.GetKeyDown(KeyCode.JoystickButton18))
+            {
+                SwitchToMenu();
+            }
+            if (Input.GetKeyDown(KeyCode.JoystickButton16))
+            {
+                SwitchToTutorial3();
+            }
+            if (Input.GetKeyDown(KeyCode.JoystickButton17))
+            {
+                SwitchToTutorial();
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Tutorial3") 
+        {
+            if (Input.GetKeyDown(KeyCode.JoystickButton18))
+            {
+                SwitchToMenu();
+            }
+            if (Input.GetKeyDown(KeyCode.JoystickButton17))
+            {
+                SwitchToTutorial2();
             }
         }
 
