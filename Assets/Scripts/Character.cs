@@ -320,6 +320,13 @@ public class Character : MonoBehaviour
             Music_Note_scpt mns = other.gameObject.GetComponent<Music_Note_scpt>();
             mns.hit();
             int index = Character.score % 11;
+            if (score%10 == 0){
+                AudioSource snow_ball = GameObject.Find("MusicSnowBall").GetComponent<AudioSource>();
+                snow_ball.Play();
+            } else {
+                AudioSource snow_flake = GameObject.Find("MusicSnowFlake").GetComponent<AudioSource>();
+                snow_flake.Play();
+            }
             // AudioSource ice_break_long = GameObject.Find("MusicSnowFlake").GetComponent<AudioSource>();
             Snow_balls_ui.hit(index);
         }
