@@ -16,8 +16,8 @@ EditorBuildSettings:
     guid: d34c997de99c2469ebbbe3113c275d13
   - enabled: 1
     path: Assets/Tutorial2.unity
-    guid: 1f8b49a8dde76478f82874f6639e5ba8
+    guid: 2d13fe055c6c4444b92d8ee2487aacd2
   - enabled: 1
     path: Assets/Tutorial3.unity
-    guid: 90f31dbc6c0da4de19b95a7efb4ad102
+    guid: 75096d7bd02f147b193fc22fabbf8296
   m_configObjects: {}
