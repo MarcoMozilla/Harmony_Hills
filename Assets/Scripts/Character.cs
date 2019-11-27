@@ -121,9 +121,9 @@ public class Character : MonoBehaviour
 
             //过一段时间游戏结束
         }
-        if (is_win){
-            charAnim.Play("Win");
-        }
+        //if (is_win){
+        //    charAnim.Play("Win");
+        //}
         if (isGameOver && Time.time - GameOverTime > 3)
         {
             GameController game_controller = GameObject.FindGameObjectWithTag("end_line").transform.GetComponent<GameController>();
@@ -384,9 +384,11 @@ public class Character : MonoBehaviour
             // other.gameObject.GetComponent<GameController>().EndGame(false);
         } else if (other.gameObject.tag == "end_line")
         {
+            charAnim.Play("Win");
             isGameOver = true;
             move_logic = 1;
             is_win = true;
+            GameOverTime = Time.time;
         }
     }
 
