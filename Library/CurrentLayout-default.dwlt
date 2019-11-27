@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 7.2000003
-    y: 50.4
+    x: 890.4
+    y: 69.6
     width: 2522.4001
     height: 1034.4
   m_ShowMode: 4
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 1123, y: 272}
   m_MaxSize: {x: 26018, y: 10022}
   vertical: 0
-  controlID: 241
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 7.2000003
-    y: 80.8
+    x: 890.4
+    y: 100
     width: 1150
     height: 966
   m_ViewDataDictionary: {fileID: 0}
@@ -350,8 +350,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1157.6
-    y: 80.8
+    x: 2040.8
+    y: 100
     width: 654
     height: 966
   m_ViewDataDictionary: {fileID: 0}
@@ -449,8 +449,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1813.6
-    y: 80.8
+    x: 2696.8
+    y: 100
     width: 202
     height: 966
   m_ViewDataDictionary: {fileID: 0}
@@ -459,7 +459,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 243efeff8e3efeff5e40feffc843fefff851feffc857feffd4c60000dec60000c8c80000d2c8000010ca00001aca000000cb00000acb0000
+      m_ExpandedIDs: d62dffffb631ffffc03bffff383dffff647300006e730000b87400007e750000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -504,8 +504,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2017.6
-    y: 80.8
+    x: 2900.8
+    y: 100
     width: 232
     height: 966
   m_ViewDataDictionary: {fileID: 0}
@@ -527,14 +527,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Pufan\Desktop\MusicSurf-1.0
+  m_LastProjectPath: C:\Users\Pufan\Desktop\CSC404\MusicSurf-1.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: da330000
     m_LastClickedID: 13274
-    m_ExpandedIDs: ffffffff00000000ec5f0000347200003e72000042720000bcba000050bb0000f2bb000052bc0000b0bd0000dcbd0000fabd00003abe000050be00008abe0000dcbe00004ebf00006ac00000c2c0000000c100003cc3000050c3000094c300004cc4000062c4000094c40000a4c40000b0c400000ec500009ec60000
+    m_ExpandedIDs: 00000000524900009e530000dc530000ea530000a25c0000ec5e0000925f0000a0620000ea6200002663000094630000b463000020640000a064000050650000a26700004c680000c4680000306c0000686c0000c66c0000486e00007c6e0000f06e0000046f0000266f00003070000016730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,26 +559,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 1711}
+    scrollPos: {x: 0, y: 1775}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ec5f0000347200003e72000042720000bcba0000f2bb000052bc0000b0bd0000dcbd0000fabd00003abe000050be00008abe0000dcbe00004ebf00006ac00000c2c0000000c100003cc3000050c3000094c300004cc4000062c4000094c40000a4c40000b0c400000ec500009ec60000
+    m_ExpandedIDs: ffffffff00000000524900009e530000dc530000ea530000a25c0000ec5e0000925f0000a0620000ea6200002663000094630000b463000020640000a064000050650000a26700004c680000c4680000306c0000686c0000c66c0000486e00007c6e0000f06e0000046f0000266f00003070000016730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Tutorial3
+      m_OriginalName: Tutorial3
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 27676
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 9}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -639,8 +639,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2251.2
-    y: 80.8
+    x: 3134.4001
+    y: 100
     width: 277
     height: 966
   m_ViewDataDictionary: {fileID: 0}
