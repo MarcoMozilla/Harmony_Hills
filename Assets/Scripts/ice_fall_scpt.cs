@@ -17,7 +17,8 @@ public class ice_fall_scpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Time.time - 45) > fall_time) {
+        if ((Time.time - Character.time_leak - 45) > fall_time) {
+            Debug.Log(Character.time_leak);
             Rigidbody rb = this.transform.GetComponent<Rigidbody>();
             rb.useGravity = true;
         }
