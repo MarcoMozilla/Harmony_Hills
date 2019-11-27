@@ -104,6 +104,7 @@ public class Character : MonoBehaviour
             this.transform.position = pos;
             this.transform.rotation = Path_Node_scpt.queryRotY(idx_hidx, idx, hidx);
 
+            // Debug.Log(idx_hidx[0]);
             // 如果 idx_hidx[0]> path node 的个数
             //游戏结束
 
@@ -179,15 +180,15 @@ public class Character : MonoBehaviour
         nextpos = Input.GetAxis("Horizontal");
         //Debug.Log(nextpos);
         //charAnim.SetFloat("nextpos", nextpos);
-        if (nextpos < 0){
+        if (nextpos != curpos){
             charAnim.Play("character_l");
         }
-        else if (nextpos > 0){
-            charAnim.Play("character_l");
-        }
-        else{
-            charAnim.Play("routine");
-        }
+        //else if (nextpos > 0){
+        //    charAnim.Play("character_l");
+        //}
+        //else{
+        //    charAnim.Play("routine");
+        //}
 
 
 
@@ -229,9 +230,9 @@ public class Character : MonoBehaviour
         // =========================================================================================================
 
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton17) && (score/10)>0) {
+        if ((Input.GetKeyDown(KeyCode.JoystickButton17) || Input.GetKeyDown("up")) && (score/10)>0) {
         // if (Input.GetKeyDown("up") && (score/10)>0  ) {
-
+            charAnim.Play("Throw");
             ThrowSnowBall tscpt = this.transform.Find("Snowballstartpoint").GetComponent<ThrowSnowBall>();
             tscpt.makeSnowBall();
 
@@ -331,6 +332,7 @@ public class Character : MonoBehaviour
             Snow_balls_ui.hit(index);
         }
         else if (other.tag == "breakable_ice") {
+            charAnim.Play("Die");
             Debug.Log("breakable_ice");
             // if (score < 10)
             // {
@@ -351,6 +353,7 @@ public class Character : MonoBehaviour
         }
         else if (other.tag == "unbreakable_barrier") {
             //Debug.Log("unbreakable_barrier");
+            charAnim.Play("Die");
             Debug.Log("You die");
             GameOverTime = Time.time;
             isGameOver = true;
@@ -366,6 +369,7 @@ public class Character : MonoBehaviour
 
             //撞到ice的
             Debug.Log("ice_fall");
+            charAnim.Play("Die");
             GameOverTime = Time.time;
             isGameOver = true;
             move_logic = 1;
@@ -373,6 +377,8 @@ public class Character : MonoBehaviour
         } else if (other.gameObject.tag == "end_line")
         {
             other.gameObject.GetComponent<GameController>().EndGame(true);
+            charAnim.Play("Win");
+            charAnim.Play("Win");
         }
     }
 
