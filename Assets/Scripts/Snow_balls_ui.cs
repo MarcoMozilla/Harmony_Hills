@@ -24,7 +24,7 @@ public class Snow_balls_ui : MonoBehaviour
     void Start()
     {
 
-        snow_ball_uis = new List<GameObject>(); ;
+        snow_ball_uis = new List<GameObject>(); 
 
         snow_ball_uis.Add(obj0);
         snow_ball_uis.Add(obj1);

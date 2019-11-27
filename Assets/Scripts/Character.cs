@@ -378,7 +378,6 @@ public class Character : MonoBehaviour
         {
             other.gameObject.GetComponent<GameController>().EndGame(true);
             charAnim.Play("Win");
-            charAnim.Play("Win");
         }
     }
 
