@@ -54,7 +54,7 @@ public class Character : MonoBehaviour
     public GameObject snowballs_ui;
 
     public static int leveltime = 0;
-
+    public bool is_win;
     private void Awake()
     {
     }
@@ -121,11 +121,19 @@ public class Character : MonoBehaviour
 
             //过一段时间游戏结束
         }
+        if (is_win){
+            charAnim.Play("Win");
+        }
         if (isGameOver && Time.time - GameOverTime > 3)
         {
-            Debug.Log("You die");
             GameController game_controller = GameObject.FindGameObjectWithTag("end_line").transform.GetComponent<GameController>();
-            game_controller.EndGame(false);
+            if (is_win){
+                Debug.Log("You win");
+                game_controller.GetComponent<GameController>().EndGame(true);
+            } else {
+                Debug.Log("You die");
+                game_controller.EndGame(false);
+            }
         }
 
 
@@ -376,8 +384,9 @@ public class Character : MonoBehaviour
             // other.gameObject.GetComponent<GameController>().EndGame(false);
         } else if (other.gameObject.tag == "end_line")
         {
-            other.gameObject.GetComponent<GameController>().EndGame(true);
-            charAnim.Play("Win");
+            isGameOver = true;
+            move_logic = 1;
+            is_win = true;
         }
     }
 
